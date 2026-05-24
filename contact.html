@@ -100,8 +100,37 @@
       <li><a href="contact.html" class="active">Contact</a></li>
       <li><a href="resources.html#optin" class="nav-cta">Free starter kit</a></li>
     </ul>
+  <button class="nav-hamburger" id="hamburger" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </button>
   </div>
 </nav>
+<div class="nav-mobile-menu" id="mobileMenu">
+  <a href="index.html">Home</a>
+  <a href="resources.html">Resources</a>
+  <a href="workshops.html">Workshops</a>
+  <a href="about.html">About</a>
+  <a href="contact.html">Contact</a>
+  <a href="resources.html#optin" class="nav-cta">Free starter kit</a>
+</div>
+<script>
+(function(){
+  var btn = document.getElementById('hamburger');
+  var menu = document.getElementById('mobileMenu');
+  btn.addEventListener('click', function(){
+    btn.classList.toggle('open');
+    menu.classList.toggle('open');
+    document.body.style.overflow = menu.classList.contains('open') ? 'hidden' : '';
+  });
+  menu.querySelectorAll('a').forEach(function(a){
+    a.addEventListener('click', function(){
+      btn.classList.remove('open');
+      menu.classList.remove('open');
+      document.body.style.overflow = '';
+    });
+  });
+})();
+</script>
 
 <!-- PAGE HERO -->
 <div class="page-hero" style="background:var(--blue); min-height:240px;">

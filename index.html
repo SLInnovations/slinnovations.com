@@ -46,8 +46,8 @@
     #mlb2-38673395.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-fieldRow{margin:0 0 12px 0;width:100%}
     #mlb2-38673395.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-fieldRow input{background-color:#fff!important;color:#333!important;border-color:#ddd;border-radius:8px!important;border-style:solid!important;border-width:1px!important;font-size:15px!important;padding:12px 14px!important;width:100%!important;box-sizing:border-box!important}
     #mlb2-38673395.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-embedSubmit{margin:0 0 8px 0;float:left;width:100%}
-    #mlb2-38673395.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-embedSubmit button{background-color:#ffffff!important;border:none!important;border-radius:8px!important;color:#e66b5d!important;cursor:pointer;font-family:var(--font-head)!important;font-size:15px!important;font-weight:700!important;padding:13px!important;width:100%!important;box-sizing:border-box!important}
-    #mlb2-38673395.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-embedSubmit button:hover{background-color:#f3d25b!important;color:#2d4a52!important}
+    #mlb2-38673395.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-embedSubmit button{background-color:#f3d25b!important;border:none!important;border-radius:8px!important;color:#2d4a52!important;cursor:pointer;font-family:var(--font-head)!important;font-size:15px!important;font-weight:700!important;padding:13px!important;width:100%!important;box-sizing:border-box!important}
+    #mlb2-38673395.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-embedSubmit button:hover{background-color:#e8c440!important;color:#2d4a52!important}
     #mlb2-38673395.ml-form-embedContainer .ml-form-embedWrapper .ml-form-successBody{padding:32px}
     #mlb2-38673395.ml-form-embedContainer .ml-form-embedWrapper .ml-form-successBody .ml-form-successContent h4{color:#3b6f8d;font-family:var(--font-head);font-size:1.3rem;font-weight:800;margin:0 0 8px 0;text-align:center}
     #mlb2-38673395.ml-form-embedContainer .ml-form-embedWrapper .ml-form-successBody .ml-form-successContent p{color:#555;font-size:14px;text-align:center}
@@ -77,8 +77,37 @@
       <li><a href="contact.html">Contact</a></li>
       <li><a href="resources.html" class="nav-cta">Browse resources</a></li>
     </ul>
+  <button class="nav-hamburger" id="hamburger" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </button>
   </div>
 </nav>
+<div class="nav-mobile-menu" id="mobileMenu">
+  <a href="index.html">Home</a>
+  <a href="resources.html">Resources</a>
+  <a href="workshops.html">Workshops</a>
+  <a href="about.html">About</a>
+  <a href="contact.html">Contact</a>
+  <a href="resources.html" class="nav-cta">Browse resources</a>
+</div>
+<script>
+(function(){
+  var btn = document.getElementById('hamburger');
+  var menu = document.getElementById('mobileMenu');
+  btn.addEventListener('click', function(){
+    btn.classList.toggle('open');
+    menu.classList.toggle('open');
+    document.body.style.overflow = menu.classList.contains('open') ? 'hidden' : '';
+  });
+  menu.querySelectorAll('a').forEach(function(a){
+    a.addEventListener('click', function(){
+      btn.classList.remove('open');
+      menu.classList.remove('open');
+      document.body.style.overflow = '';
+    });
+  });
+})();
+</script>
 
 <!-- HERO -->
 <section class="hero-split">
