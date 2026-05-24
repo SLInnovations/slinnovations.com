@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact: Spark Literacy Innovations Group</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 64px;
+      align-items: start;
+    }
+    .contact-form-wrapper {
+      background: var(--white);
+      border-radius: var(--radius-lg);
+      padding: 40px;
+      box-shadow: var(--shadow-md);
+    }
+    .contact-form-wrapper h2 { font-size: 1.4rem; margin-bottom: 24px; }
+    .form-group { margin-bottom: 20px; }
+    .form-group label {
+      display: block;
+      font-family: 'Nunito', sans-serif;
+      font-weight: 700;
+      font-size: 14px;
+      color: var(--blue);
+      margin-bottom: 6px;
+    }
+    .form-group input,
+    .form-group textarea {
+      width: 100%;
+      padding: 12px 14px;
+      border: 1px solid #dde5ea;
+      border-radius: 8px;
+      font-family: 'Source Sans 3', sans-serif;
+      font-size: 15px;
+      color: var(--text);
+      background: var(--off-white);
+      transition: border-color 0.2s;
+      box-sizing: border-box;
+    }
+    .form-group input:focus,
+    .form-group textarea:focus {
+      outline: none;
+      border-color: var(--blue);
+      background: var(--white);
+    }
+    .form-group textarea { height: 140px; resize: vertical; }
+    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+    .form-check {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 20px;
+    }
+    .form-check input { width: auto; }
+    .form-check label {
+      font-size: 14px;
+      color: var(--text-mid);
+      font-family: 'Source Sans 3', sans-serif;
+      font-weight: 400;
+      margin: 0;
+    }
+
+    .contact-info h2 { font-size: 1.9rem; margin-bottom: 20px; }
+    .contact-info p { color: var(--text-mid); margin-bottom: 16px; }
+    .contact-detail {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 12px;
+    }
+    .contact-detail a {
+      color: var(--blue);
+      font-weight: 600;
+    }
+
+    @media (max-width: 768px) {
+      .contact-grid { grid-template-columns: 1fr; gap: 40px; }
+      .form-row { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+<div id="launch-banner" style="background:var(--blue-dark); color:var(--white); padding:16px 24px; text-align:center; font-family:var(--font-head); font-size:18px; font-weight:700; position:relative; z-index:200;"><span style="color:var(--yellow);">🚀 SSW Foundations launches June 23rd, 2026!</span> &nbsp;&nbsp;<span id="countdown-text" style="color:rgba(255,255,255,0.85); font-weight:400;"></span> &nbsp;&nbsp;<a href="ssw.html#ssw-optin" style="color:var(--yellow); text-decoration:underline; font-size:16px;">Join the waitlist →</a></div><script>(function(){var launch=new Date("2026-06-23T09:00:00");function tick(){var now=new Date();var diff=launch-now;if(diff<=0){document.getElementById("countdown-text").textContent="Doors are open!";return;}var d=Math.floor(diff/86400000);var h=Math.floor((diff%86400000)/3600000);var m=Math.floor((diff%3600000)/60000);var s=Math.floor((diff%60000)/1000);document.getElementById("countdown-text").textContent=d+"d "+h+"h "+m+"m "+s+"s away";}tick();setInterval(tick,1000);})();</script>
+
+<!-- NAV -->
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo">
+      <img src="logo.png" alt="Spark Literacy Innovations Group">
+    </a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="resources.html">Resources</a></li>
+      <li><a href="workshops.html">Workshops</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html" class="active">Contact</a></li>
+      <li><a href="resources.html#optin" class="nav-cta">Free starter kit</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- PAGE HERO -->
+<div class="page-hero" style="background:var(--blue); min-height:240px;">
+  <div class="page-hero-bg" style="background-image:url('img-books-stack.jpg');"></div>
+  <div class="page-hero-content">
+    <div class="hero-eyebrow">We read every message</div>
+    <h1>Get in touch</h1>
+    <p>Have a question about our resources or workshops? We'd love to hear from you.</p>
+  </div>
+</div>
+
+<!-- CONTACT CONTENT -->
+<section class="section">
+  <div class="container">
+    <div class="contact-grid">
+
+      <div class="contact-info">
+        <div class="accent-bar"></div>
+        <h2>Let's connect</h2>
+        <p>Whether you have a question about a resource, want to know more about our workshops, or just want to say hello, we're happy to hear from you.</p>
+        <p>We typically respond within 1–2 business days.</p>
+        <div class="contact-detail">
+          <span>📧</span>
+          <a href="mailto:hello@slinnovations.com">hello@slinnovations.com</a>
+        </div>
+        <div style="margin-top:40px; background:var(--blue-light); border-radius:var(--radius-lg); padding:32px;">
+          <h3 style="font-size:1.05rem; margin-bottom:12px;">Not sure what you need?</h3>
+          <p style="color:var(--text-mid); font-size:0.9rem; margin-bottom:16px;">Start with our free Writing Starter Kit. It's a great way to get a feel for the way we work and figure out exactly where your student needs support.</p>
+          <a href="resources.html#optin" class="btn btn-blue btn-sm">Get the free kit</a>
+        </div>
+      </div>
+
+      <div class="contact-form-wrapper">
+        <h2>Send us a message</h2>
+        <form action="https://formspree.io/f/xjgzekbz" method="POST">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="first">First name</label>
+              <input type="text" id="first" name="first_name" placeholder="Jane" required>
+            </div>
+            <div class="form-group">
+              <label for="last">Last name</label>
+              <input type="text" id="last" name="last_name" placeholder="Smith">
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="email">Email <span style="color:var(--coral);">*</span></label>
+            <input type="email" id="email" name="email" placeholder="jane@example.com" required>
+          </div>
+          <div class="form-group">
+            <label for="message">Message <span style="color:var(--coral);">*</span></label>
+            <textarea id="message" name="message" placeholder="Tell us a bit about what you're looking for..." required></textarea>
+          </div>
+          <div class="form-check">
+            <input type="checkbox" id="mailinglist" name="add_to_list">
+            <label for="mailinglist">Add me to your mailing list</label>
+          </div>
+          <button type="submit" class="btn btn-blue" style="width:100%;">Send message</button>
+        </form>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <img src="SLI-logo.svg" alt="Spark Literacy Innovations Group" style="height:72px; width:auto; margin:0 auto 16px; display:block; mix-blend-mode:lighten; filter:brightness(1.1);">
+  <div class="footer-tagline">hello@slinnovations.com</div>
+  <ul class="footer-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="resources.html">Resources</a></li>
+    <li><a href="workshops.html">Workshops</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+  <hr class="footer-divider">
+  <ul class="footer-links" style="margin-bottom:16px;">
+    <li><a href="privacy.html">Privacy Policy</a></li>
+    <li><a href="terms.html">Terms &amp; Conditions</a></li>
+    <li><a href="refund.html">Refund Policy</a></li>
+  </ul>
+  <div class="footer-copy">© 2026 Spark Literacy Innovations Group. All rights reserved.</div>
+</footer>
+
+</body>
+</html>

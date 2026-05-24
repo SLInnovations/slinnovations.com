@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Structured Steps to Writing: Spark Literacy Innovations Group</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* SSW HERO */
+    .ssw-hero {
+      background: var(--blue);
+      padding: 0;
+    }
+    .ssw-hero-inner {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      min-height: 420px;
+    }
+    .ssw-hero-left {
+      padding: 64px 56px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+    .ssw-hero-left h1 {
+      color: var(--white);
+      font-size: 2.6rem;
+      margin-bottom: 16px;
+    }
+    .ssw-hero-left p {
+      color: rgba(255,255,255,0.85);
+      font-size: 1.05rem;
+      margin-bottom: 32px;
+    }
+    .ssw-hero-right {
+      background: var(--blue-light);
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2px;
+    }
+    .stat-tile {
+      background: var(--white);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 32px 24px;
+      text-align: center;
+    }
+    .stat-tile .num {
+      font-family: 'Nunito', sans-serif;
+      font-weight: 800;
+      font-size: 2.4rem;
+      color: var(--blue);
+      line-height: 1;
+      margin-bottom: 6px;
+    }
+    .stat-tile .lbl {
+      font-size: 0.9rem;
+      color: var(--text-mid);
+    }
+
+    /* LAUNCH BANNER */
+    .launch-banner {
+      background: var(--coral);
+      padding: 18px 24px;
+      text-align: center;
+      color: var(--white);
+      font-family: 'Nunito', sans-serif;
+      font-weight: 700;
+      font-size: 1rem;
+    }
+    .launch-banner a { color: var(--yellow); text-decoration: underline; }
+
+    /* FEATURES GRID */
+    .feature-tile {
+      background: var(--white);
+      border-radius: var(--radius-lg);
+      padding: 28px;
+      box-shadow: var(--shadow);
+      text-align: center;
+    }
+    .feature-tile h3 { font-size: 1rem; margin-bottom: 10px; }
+    .feature-tile p { font-size: 0.9rem; color: var(--text-mid); line-height: 1.6; }
+
+    /* TIER TABS */
+    .tier-nav {
+      display: flex;
+      gap: 2px;
+      background: #e4eef3;
+      border-radius: var(--radius);
+      padding: 4px;
+      margin-bottom: 32px;
+      max-width: 560px;
+    }
+    .tier-tab {
+      flex: 1;
+      padding: 12px 16px;
+      border-radius: 7px;
+      font-family: 'Nunito', sans-serif;
+      font-weight: 700;
+      font-size: 13px;
+      text-align: center;
+      cursor: pointer;
+      transition: all 0.2s;
+      color: var(--text-mid);
+      border: none;
+      background: transparent;
+    }
+    .tier-tab.active { background: var(--white); color: var(--blue); box-shadow: var(--shadow); }
+    .tier-tab span { display: block; font-size: 11px; font-weight: 400; color: var(--text-light); margin-top: 2px; }
+
+    /* UNIT CARDS */
+    .unit-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 16px;
+      margin-bottom: 32px;
+    }
+    .unit-card {
+      background: var(--white);
+      border-radius: var(--radius);
+      padding: 20px;
+      box-shadow: var(--shadow);
+    }
+    .unit-label {
+      font-family: 'Nunito', sans-serif;
+      font-weight: 700;
+      font-size: 11px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      margin-bottom: 6px;
+    }
+    .unit-card h4 { font-size: 0.95rem; margin-bottom: 8px; }
+    .unit-card p { font-size: 0.85rem; color: var(--text-mid); line-height: 1.5; }
+
+    /* TOOLS */
+    .tools-section { background: var(--yellow-pale); }
+    .tool-card {
+      background: var(--white);
+      border-radius: var(--radius-lg);
+      padding: 28px;
+      box-shadow: var(--shadow);
+    }
+    .tool-badge {
+      display: inline-block;
+      border: 2px solid var(--coral);
+      color: var(--coral);
+      font-family: 'Nunito', sans-serif;
+      font-weight: 700;
+      font-size: 11px;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      padding: 3px 10px;
+      border-radius: 20px;
+      margin-bottom: 12px;
+    }
+    .tool-card h3 { font-size: 1.05rem; margin-bottom: 10px; }
+    .tool-card p { font-size: 0.9rem; color: var(--text-mid); line-height: 1.6; }
+
+    /* WHO IT'S FOR */
+    .who-grid {
+      background: var(--coral);
+      border-radius: var(--radius-lg);
+      padding: 48px;
+    }
+    .who-grid h2 { color: var(--white); text-align: center; margin-bottom: 32px; font-size: 1.8rem; }
+    .who-card {
+      background: var(--white);
+      border-radius: var(--radius);
+      padding: 24px;
+      text-align: center;
+    }
+    .who-card h3 { font-size: 1rem; color: var(--blue); margin-bottom: 10px; }
+    .who-card p { font-size: 0.88rem; color: var(--text-mid); line-height: 1.6; }
+
+    /* FINAL CTA */
+    .ssw-cta {
+      background: var(--coral);
+      padding: 80px 0;
+      text-align: center;
+    }
+    .ssw-cta h2 { color: var(--white); font-size: 2rem; margin-bottom: 16px; }
+    .ssw-cta p { color: rgba(255,255,255,0.8); max-width: 480px; margin: 0 auto 32px; }
+
+    @media (max-width: 768px) {
+      .ssw-hero-inner { grid-template-columns: 1fr; }
+      .ssw-hero-left { padding: 48px 32px; }
+      .ssw-hero-right { grid-template-columns: 1fr 1fr; }
+      .unit-grid { grid-template-columns: 1fr 1fr; }
+      .who-grid { padding: 32px 24px; }
+    }
+  </style>
+</head>
+<body>
+<div id="launch-banner" style="background:var(--blue-dark); color:var(--white); padding:16px 24px; text-align:center; font-family:var(--font-head); font-size:18px; font-weight:700; position:relative; z-index:200;"><span style="color:var(--yellow);">🚀 SSW Foundations launches June 23rd, 2026!</span> &nbsp;&nbsp;<span id="countdown-text" style="color:rgba(255,255,255,0.85); font-weight:400;"></span> &nbsp;&nbsp;<a href="ssw.html#ssw-optin" style="color:var(--yellow); text-decoration:underline; font-size:16px;">Join the waitlist →</a></div><script>(function(){var launch=new Date("2026-06-23T09:00:00");function tick(){var now=new Date();var diff=launch-now;if(diff<=0){document.getElementById("countdown-text").textContent="Doors are open!";return;}var d=Math.floor(diff/86400000);var h=Math.floor((diff%86400000)/3600000);var m=Math.floor((diff%3600000)/60000);var s=Math.floor((diff%60000)/1000);document.getElementById("countdown-text").textContent=d+"d "+h+"h "+m+"m "+s+"s away";}tick();setInterval(tick,1000);})();</script>
+
+<!-- NAV -->
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo">
+      <img src="logo.png" alt="Spark Literacy Innovations Group">
+    </a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="resources.html" class="active">Resources</a></li>
+      <li><a href="workshops.html">Workshops</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="resources.html#optin" class="nav-cta">Free starter kit</a></li>
+    </ul>
+  </div>
+</nav>
+
+
+<div class="launch-banner">
+  Foundations launches June 23rd, 2026! <a href="#ssw-optin">Join the list to be the first to know.</a>
+</div>
+
+<!-- HERO -->
+<section class="ssw-hero">
+  <div class="ssw-hero-inner" style="max-width:1080px; margin:0 auto;">
+    <div class="ssw-hero-left">
+      <img src="SSW-logo.svg" alt="Structured Steps to Writing" style="max-width:320px; margin-bottom:24px; display:block;">
+      <h1 style="position:absolute; left:-9999px;">Structured Steps to Writing</h1>
+      <p>A complete writing program built on explicit, systematic, sequential instruction. From the very first sentence to a finished multi-genre essay.</p>
+      <div style="display:flex; gap:12px; flex-wrap:wrap;">
+        <a href="#ssw-optin" class="btn btn-coral">Join the waitlist</a>
+        <a href="#what-it-covers" class="btn btn-outline-white">See what's covered</a>
+      </div>
+    </div>
+    <div class="ssw-hero-right">
+      <div class="stat-tile"><div class="num">12</div><div class="lbl">Sequential units</div></div>
+      <div class="stat-tile"><div class="num">15</div><div class="lbl">Min per lesson</div></div>
+      <div class="stat-tile"><div class="num">4</div><div class="lbl">Core tools</div></div>
+      <div class="stat-tile"><div class="num">Zero</div><div class="lbl">Prep needed</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- TWELVE UNITS -->
+<section class="section" id="what-it-covers" style="background:var(--off-white);">
+  <div class="container">
+    <div class="accent-bar" style="margin:0 auto 16px;"></div>
+    <h2 style="text-align:center; font-size:1.8rem; margin-bottom:8px;">Twelve units. One complete writing journey.</h2>
+    <p style="text-align:center; color:var(--text-mid); max-width:560px; margin:0 auto 40px;">Three tiers, each building directly on the last. Students start where they are and move forward when they're genuinely ready. Every skill is taught explicitly before the next one is introduced.</p>
+
+    <div class="tier-nav">
+      <div class="tier-tab active">TIER 1: FOUNDATIONS <span>Building sentences · Units 1–4</span></div>
+      <div class="tier-tab">TIER 2: FRAMEWORK <span>Paragraph writing · Units 5–9</span></div>
+      <div class="tier-tab">TIER 3: COMPOSITION <span>Multi-genre essays · Units 10–12</span></div>
+    </div>
+
+    <div class="unit-grid">
+      <div class="unit-card">
+        <div class="unit-label" style="color:var(--blue);">Unit 1</div>
+        <h4>Building Basic Sentences</h4>
+        <p>Capitals, punctuation, nouns, and verbs. The foundations of a complete sentence.</p>
+      </div>
+      <div class="unit-card">
+        <div class="unit-label" style="color:var(--blue);">Unit 2</div>
+        <h4>Expanding Sentences</h4>
+        <p>Adjectives and adverbs. Making sentences more precise and more interesting.</p>
+      </div>
+      <div class="unit-card">
+        <div class="unit-label" style="color:var(--blue);">Unit 3</div>
+        <h4>Sentence Variety and Types</h4>
+        <p>Simple, compound, and complex sentences. Varying beginnings and structure.</p>
+      </div>
+      <div class="unit-card">
+        <div class="unit-label" style="color:var(--blue);">Unit 4</div>
+        <h4>Advanced Sentence Structure</h4>
+        <p>Complex sentences, appositives, and SPARK+SORT for idea generation.</p>
+      </div>
+    </div>
+
+    <div style="background:var(--white); border-radius:var(--radius-lg); padding:32px; box-shadow:var(--shadow); text-align:center;">
+      <h3 style="font-size:1.1rem; margin-bottom:20px;">Every unit includes</h3>
+      <div class="grid-3" style="text-align:left;">
+        <div>
+          <p style="font-size:0.9rem; margin-bottom:8px;">✓ &nbsp;Instructor manual with fully scripted SAY/DO/ASK lessons</p>
+          <p style="font-size:0.9rem; margin-bottom:8px;">✓ &nbsp;Assessment package: baseline, final, scoring guide, and planning tools</p>
+        </div>
+        <div>
+          <p style="font-size:0.9rem; margin-bottom:8px;">✓ &nbsp;Student workbook: two pages per lesson, ready to print</p>
+          <p style="font-size:0.9rem; margin-bottom:8px;">✓ &nbsp;15-minute lessons designed for 1:1 or small group delivery</p>
+        </div>
+        <div>
+          <p style="font-size:0.9rem; margin-bottom:8px;">✓ &nbsp;Multisensory resource pack: sort headers, word cards, sentence strips</p>
+          <p style="font-size:0.9rem;">✓ &nbsp;Interactive HTML lesson tool: open and project, no extra tech required</p>
+        </div>
+      </div>
+    </div>
+
+    <div style="text-align:center; margin-top:32px; padding:20px; background:var(--blue-light); border-radius:var(--radius);">
+      <p style="font-size:0.95rem; color:var(--text-mid); margin-bottom:12px;">Want lesson-by-lesson detail? Download the full scope and sequence.</p>
+      <a href="https://ln5.sync.com/dl/d9cd8c380#ubgr8xm8-8c3b6buu-sfehd8au-e779f5w9" target="_blank" class="btn btn-outline btn-sm">Download the full scope and sequence</a>
+    </div>
+
+    <div style="background:var(--blue-light); border-radius:var(--radius-lg); padding:32px; margin-top:40px; text-align:center;">
+      <div class="label label-blue" style="margin-bottom:16px;">FOUNDATIONS IS JUST THE BEGINNING!</div>
+      <p style="color:var(--text-mid); font-size:0.95rem; max-width:500px; margin:0 auto;">Framework and Composition tiers are currently in development. Students who complete Foundations move directly into paragraph writing, essay planning, and multi-genre composition.</p>
+    </div>
+  </div>
+</section>
+
+<!-- FOUR TOOLS -->
+<section class="section tools-section">
+  <div class="container">
+    <div class="accent-bar" style="margin:0 auto 16px;"></div>
+    <h2 style="text-align:center; font-size:1.8rem; margin-bottom:8px;">Four tools. Used well. From the first sentence to the final essay.</h2>
+    <p style="text-align:center; color:var(--text-mid); max-width:500px; margin:0 auto 48px;">The same 4 tools show up across all 12 units. Students learn them once. Then they grow with them.</p>
+    <div class="grid-2">
+      <div class="tool-card">
+        <div class="tool-badge">SPARK + SORT</div>
+        <h3>Solve the blank page problem</h3>
+        <p>Before a student writes a single word, they use SPARK to pour out every idea freely, then SORT to choose their strongest ideas and land on a clear focus. The blank page stops being scary. Interactive app included in Step Forward.</p>
+      </div>
+      <div class="tool-card">
+        <div class="tool-badge">STEMS</div>
+        <h3>Build every paragraph</h3>
+        <p>Every sentence in a paragraph has a name and a job. Students learn STEMS once and use it across every unit, every genre, every level. The framework never changes. The writing grows.</p>
+      </div>
+      <div class="tool-card">
+        <div class="tool-badge">CAMPS</div>
+        <h3>Catch every error</h3>
+        <p>A systematic editing process students internalise rather than guess at. Capitalisation, Agreement, Meaning, Punctuation, Spelling. In order, every time.</p>
+      </div>
+      <div class="tool-card">
+        <div class="tool-badge">CHECKLISTS</div>
+        <h3>Open and close with confidence</h3>
+        <p>Introduction and conclusion checklists make the hardest paragraphs learnable, repeatable, and teachable. Students check every element before moving on.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHAT SETS SSW APART -->
+<section class="section">
+  <div class="container">
+    <div class="accent-bar" style="margin:0 auto 16px;"></div>
+    <h2 style="text-align:center; font-size:1.8rem; margin-bottom:8px;">What sets SSW apart</h2>
+    <p style="text-align:center; color:var(--text-mid); margin-bottom:40px;">Research supported. Practitioner designed. Ready to use.</p>
+    <div class="grid-3">
+      <div class="feature-tile">
+        <div class="card-dot card-dot-coral" style="margin:0 auto 16px;"></div>
+        <h3>Fully scripted lessons</h3>
+        <p>SAY/DO/ASK teacher scripts for every phase. Open the lesson and teach it. No planning required.</p>
+      </div>
+      <div class="feature-tile">
+        <div class="card-dot card-dot-blue" style="margin:0 auto 16px;"></div>
+        <h3>15-minute lessons</h3>
+        <p>Designed to fit any tutoring session or intervention block. Two sessions a week delivers real, measurable progress.</p>
+      </div>
+      <div class="feature-tile">
+        <div class="card-dot card-dot-yellow" style="margin:0 auto 16px;"></div>
+        <h3>Built-in assessments</h3>
+        <p>Baseline and final assessments for every unit, with scoring guides, growth analysis, and parent communication letters.</p>
+      </div>
+      <div class="feature-tile">
+        <div class="card-dot card-dot-coral" style="margin:0 auto 16px;"></div>
+        <h3>Diagnostic placement</h3>
+        <p>A standalone entry screener places every student at exactly the right starting point before instruction begins.</p>
+      </div>
+      <div class="feature-tile">
+        <div class="card-dot card-dot-blue" style="margin:0 auto 16px;"></div>
+        <h3>Multisensory options</h3>
+        <p>Kinesthetic, visual, auditory, and tactile extension activities are built into every lesson.</p>
+      </div>
+      <div class="feature-tile">
+        <div class="card-dot card-dot-yellow" style="margin:0 auto 16px;"></div>
+        <h3>Interactive digital tools</h3>
+        <p>Companion HTML lesson presentations for every unit. Slide-based, student-facing, ready to open and project.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHO IT'S FOR -->
+<section class="section" style="background:var(--off-white);">
+  <div class="container">
+    <div class="who-grid">
+      <h2>Designed around the way you actually work!</h2>
+      <div class="grid-2">
+        <div class="who-card">
+          <h3>OG tutors and intervention specialists</h3>
+          <p>Writing instruction built the same way your reading instruction is. Explicit, sequential, systematic. A natural fit alongside any explicit literacy framework.</p>
+        </div>
+        <div class="who-card">
+          <h3>Resource and classroom teachers</h3>
+          <p>A complete 12-unit sequence, fully scripted, that fits into the time you actually have. No more wondering what to teach next.</p>
+        </div>
+        <div class="who-card">
+          <h3>Homeschool families</h3>
+          <p>A clear, complete path from first sentence to finished essay. Explicit instruction. A clear sequence. No guessing about what comes next.</p>
+        </div>
+        <div class="who-card">
+          <h3>Start where your student is</h3>
+          <p>No skill level labels. A diagnostic screener places every student at the right starting point. They move forward when they're genuinely ready.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FINAL CTA + OPTIN -->
+<section class="ssw-cta" id="ssw-optin">
+  <div class="container">
+    <h2>Be the first to know when doors open!</h2>
+    <p>Foundations launches June 23rd, 2026. Join the list and get your free Writing Starter Kit while you wait: a writing guide and mini-screener to help you figure out exactly where your student needs support.</p>
+    <div style="max-width:420px; margin:0 auto;">
+      <!-- MAILERLITE FORM (compact) -->
+      <style>
+      #mlb2-38673395b.ml-form-embedContainer{box-sizing:border-box;display:table;margin:0 auto;position:static;width:100%!important}
+      #mlb2-38673395b .ml-form-embedWrapper{background:#ffffff;border-radius:12px;display:inline-block!important;width:100%;padding:0}
+      #mlb2-38673395b .ml-form-embedBody{padding:28px}
+      #mlb2-38673395b .ml-form-embedContent h4{color:#3b6f8d;font-family:'Nunito',sans-serif;font-size:1.15rem;font-weight:800;margin:0 0 6px;text-align:center}
+      #mlb2-38673395b .ml-form-embedContent p{color:#555;font-size:13px;text-align:center;margin-bottom:16px}
+      #mlb2-38673395b .ml-form-fieldRow{margin:0 0 10px;width:100%}
+      #mlb2-38673395b .ml-form-fieldRow input{background:#fff!important;color:#333!important;border:1px solid #ddd;border-radius:8px!important;font-size:14px!important;padding:11px 14px!important;width:100%!important;box-sizing:border-box!important}
+      #mlb2-38673395b .ml-form-embedSubmit{float:left;width:100%;margin:0 0 8px}
+      #mlb2-38673395b .ml-form-embedSubmit button{background:#e66b5d!important;border:none!important;border-radius:8px!important;color:#fff!important;cursor:pointer;font-family:'Nunito',sans-serif!important;font-size:14px!important;font-weight:700!important;padding:12px!important;width:100%!important}
+      #mlb2-38673395b .ml-form-embedSubmit button:hover{background:#d45847!important}
+      #mlb2-38673395b .row-success{padding:28px}
+      #mlb2-38673395b .row-success h4{color:#3b6f8d;font-family:'Nunito',sans-serif;font-size:1.1rem;font-weight:800;text-align:center}
+      #mlb2-38673395b .row-success p{color:#555;font-size:13px;text-align:center}
+      .ml-ssw-load{display:inline-block;width:20px;height:20px}
+      .ml-ssw-load:after{content:" ";display:block;width:11px;height:11px;margin:1px;border-radius:50%;border:4px solid #fff;border-color:#fff #fff #fff transparent;animation:ssw-spin 1.2s linear infinite}
+      @keyframes ssw-spin{0%{transform:rotate(0deg)}100%{transform:rotate(360deg)}}
+      </style>
+      <div id="mlb2-38673395b" class="ml-form-embedContainer ml-subscribe-form ml-subscribe-form-38673395">
+        <div class="ml-form-align-center">
+          <div class="ml-form-embedWrapper">
+            <div class="ml-form-embedBody row-form">
+              <div class="ml-form-embedContent">
+                <h4>Get your free Writing Starter Kit</h4>
+                <p>Join the list and be the first to know when doors open.</p>
+              </div>
+              <form action="https://assets.mailerlite.com/jsonp/2186367/forms/182320185841026880/subscribe" method="post" target="_blank">
+                <div class="ml-form-formContent">
+                  <div class="ml-form-fieldRow">
+                    <input type="text" name="fields[name]" placeholder="Your name" autocomplete="given-name">
+                  </div>
+                  <div class="ml-form-fieldRow">
+                    <input type="email" name="fields[email]" placeholder="Your email" required autocomplete="email">
+                  </div>
+                </div>
+                <input type="hidden" name="ml-submit" value="1">
+                <div class="ml-form-embedSubmit">
+                  <button type="submit">Get your free Starter Kit →</button>
+                  <button disabled style="display:none" type="button"><div class="ml-ssw-load"></div></button>
+                </div>
+                <input type="hidden" name="anticsrf" value="true">
+              </form>
+            </div>
+            <div class="row-success" style="display:none">
+              <h4>You're on the list!</h4>
+              <p><em>Check your inbox for your free resources. We'll be in touch when doors open.</em></p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <p style="color:rgba(255,255,255,0.4); font-size:12px; margin-top:10px;">No spam. Just useful resources and launch updates.</p>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <img src="SLI-logo.svg" alt="Spark Literacy Innovations Group" style="height:72px; width:auto; margin:0 auto 16px; display:block; mix-blend-mode:lighten; filter:brightness(1.1);">
+  <div class="footer-tagline">hello@slinnovations.com</div>
+  <ul class="footer-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="resources.html">Resources</a></li>
+    <li><a href="workshops.html">Workshops</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+  <hr class="footer-divider">
+  <ul class="footer-links" style="margin-bottom:16px;">
+    <li><a href="privacy.html">Privacy Policy</a></li>
+    <li><a href="terms.html">Terms &amp; Conditions</a></li>
+    <li><a href="refund.html">Refund Policy</a></li>
+  </ul>
+  <div class="footer-copy">© 2026 Spark Literacy Innovations Group. All rights reserved.</div>
+</footer>
+
+</body>
+</html>

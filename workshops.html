@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Workshops: Spark Literacy Innovations Group</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .workshop-card {
+      background: var(--white);
+      border-radius: var(--radius-lg);
+      border: 1px solid #dde5ea;
+      overflow: hidden;
+    }
+    .workshop-card-inner {
+      display: grid;
+      grid-template-columns: 1fr 280px;
+      gap: 0;
+    }
+    .workshop-card-body { padding: 36px; }
+    .workshop-card-body h3 { font-size: 1.25rem; margin-bottom: 12px; }
+    .workshop-card-body p { color: var(--text-mid); font-size: 0.95rem; margin-bottom: 20px; line-height: 1.7; }
+    .workshop-meta {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      margin-bottom: 24px;
+    }
+    .workshop-meta span { font-size: 0.9rem; color: var(--text-mid); }
+    .workshop-meta strong { color: var(--blue); }
+    .workshop-card-aside {
+      background: var(--yellow-pale);
+      padding: 36px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+    .workshop-card-aside.coming {
+      background: var(--blue-light);
+    }
+    .coming-text {
+      font-family: 'Nunito', sans-serif;
+      font-weight: 700;
+      font-size: 1.1rem;
+      color: var(--blue);
+      margin-bottom: 8px;
+    }
+
+    .stay-loop {
+      background: var(--coral);
+      border-radius: var(--radius-lg);
+      padding: 56px 48px;
+      text-align: center;
+    }
+    .stay-loop h2 { font-size: 1.8rem; margin-bottom: 8px; }
+    .stay-loop p { color: var(--text-mid); max-width: 480px; margin: 0 auto 32px; }
+
+    @media (max-width: 768px) {
+      .workshop-card-inner { grid-template-columns: 1fr; }
+      .workshop-card-aside { padding: 24px; }
+      .stay-loop { padding: 40px 24px; }
+    }
+  </style>
+</head>
+<body>
+<div id="launch-banner" style="background:var(--blue-dark); color:var(--white); padding:16px 24px; text-align:center; font-family:var(--font-head); font-size:18px; font-weight:700; position:relative; z-index:200;"><span style="color:var(--yellow);">🚀 SSW Foundations launches June 23rd, 2026!</span> &nbsp;&nbsp;<span id="countdown-text" style="color:rgba(255,255,255,0.85); font-weight:400;"></span> &nbsp;&nbsp;<a href="ssw.html#ssw-optin" style="color:var(--yellow); text-decoration:underline; font-size:16px;">Join the waitlist →</a></div><script>(function(){var launch=new Date("2026-06-23T09:00:00");function tick(){var now=new Date();var diff=launch-now;if(diff<=0){document.getElementById("countdown-text").textContent="Doors are open!";return;}var d=Math.floor(diff/86400000);var h=Math.floor((diff%86400000)/3600000);var m=Math.floor((diff%3600000)/60000);var s=Math.floor((diff%60000)/1000);document.getElementById("countdown-text").textContent=d+"d "+h+"h "+m+"m "+s+"s away";}tick();setInterval(tick,1000);})();</script>
+
+<!-- NAV -->
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo">
+      <img src="logo.png" alt="Spark Literacy Innovations Group">
+    </a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="resources.html">Resources</a></li>
+      <li><a href="workshops.html" class="active">Workshops</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="resources.html#optin" class="nav-cta">Free starter kit</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- PAGE HERO -->
+<div class="page-hero" style="background:var(--blue); min-height:240px;">
+  <div class="page-hero-bg" style="background-image:url('img-reader-girl.jpg');"></div>
+  <div class="page-hero-content">
+    <div class="hero-eyebrow">Professional learning that fits your life!</div>
+    <h1>Workshops</h1>
+    <p>Designed to fit your life. Practical. Evidence-based. Ready when you are.</p>
+  </div>
+</div>
+
+<!-- WORKSHOPS LIST -->
+<section class="section">
+  <div class="container">
+
+    <div style="display:flex; flex-direction:column; gap:24px;">
+
+      <!-- WORKSHOP 1 -->
+      <div class="workshop-card">
+        <div class="workshop-card-inner">
+          <div class="workshop-card-body">
+            <div class="tag-coming">Coming soon</div>
+            <h3>Bringing Your Structured Literacy Practice Online: Part 1</h3>
+            <p>Teaching online requires more than transferring in-person lessons to a screen. This workshop helps educators and practitioners thoughtfully adapt their instruction while staying aligned with explicit, systematic literacy principles and current research. Designed for independent practitioners who are considering or beginning online instruction.</p>
+            <div class="workshop-meta">
+              <span><strong>Format:</strong> Asynchronous / self-paced</span>
+              <span><strong>Who it's for:</strong> Tutors, classroom teachers, special educators</span>
+            </div>
+            <a href="resources.html#optin" class="btn btn-outline btn-sm">Notify me when available</a>
+          </div>
+          <div class="workshop-card-aside coming">
+            <div class="coming-text">Coming soon</div>
+            <p style="font-size:0.88rem; color:var(--text-mid);">Join the list to be the first to know.</p>
+            <a href="resources.html#optin" class="btn btn-blue btn-sm" style="margin-top:16px;">Join the list</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- WORKSHOP 2 -->
+      <div class="workshop-card">
+        <div class="workshop-card-inner">
+          <div class="workshop-card-body">
+            <div class="tag-coming">Coming soon</div>
+            <h3>Bringing Your Structured Literacy Practice Online: Part 2</h3>
+            <p>Teaching online is one thing. Sustaining an organised, efficient practice is another. This follow-up workshop focuses on the practical systems that reduce overwhelm and create consistency in your day-to-day work. For practitioners who are already teaching online or preparing to launch an online practice.</p>
+            <div class="workshop-meta">
+              <span><strong>Format:</strong> Asynchronous / self-paced</span>
+              <span><strong>Who it's for:</strong> Tutors, classroom teachers, special educators</span>
+            </div>
+            <a href="resources.html#optin" class="btn btn-outline btn-sm">Notify me when available</a>
+          </div>
+          <div class="workshop-card-aside coming">
+            <div class="coming-text">Coming soon</div>
+            <p style="font-size:0.88rem; color:var(--text-mid);">Join the list to be the first to know.</p>
+            <a href="resources.html#optin" class="btn btn-blue btn-sm" style="margin-top:16px;">Join the list</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- STAY IN THE LOOP -->
+    <div class="stay-loop" style="margin-top:64px; background:var(--coral);" id="workshop-notify">
+      <div class="accent-bar" style="margin:0 auto 16px;"></div>
+      <h2>Stay in the loop</h2>
+      <p>Workshops are coming. Grab your free Writing Starter Kit in the meantime and we'll keep you posted on everything we're launching.</p>
+      <a href="resources.html#optin" class="btn btn-blue">Get the free Writing Starter Kit</a>
+    </div>
+
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <img src="SLI-logo.svg" alt="Spark Literacy Innovations Group" style="height:72px; width:auto; margin:0 auto 16px; display:block; mix-blend-mode:lighten; filter:brightness(1.1);">
+  <div class="footer-tagline">hello@slinnovations.com</div>
+  <ul class="footer-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="resources.html">Resources</a></li>
+    <li><a href="workshops.html">Workshops</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+  <hr class="footer-divider">
+  <ul class="footer-links" style="margin-bottom:16px;">
+    <li><a href="privacy.html">Privacy Policy</a></li>
+    <li><a href="terms.html">Terms &amp; Conditions</a></li>
+    <li><a href="refund.html">Refund Policy</a></li>
+  </ul>
+  <div class="footer-copy">© 2026 Spark Literacy Innovations Group. All rights reserved.</div>
+</footer>
+
+</body>
+</html>

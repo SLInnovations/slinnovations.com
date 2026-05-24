@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Resources: Spark Literacy Innovations Group</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .resource-card {
+      background: var(--white);
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      box-shadow: var(--shadow);
+      display: flex;
+      flex-direction: column;
+    }
+    .resource-card-top {
+      padding: 28px 28px 0;
+    }
+    .resource-card-body {
+      padding: 16px 28px 28px;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+    }
+    .resource-card-body p {
+      color: var(--text-mid);
+      font-size: 0.95rem;
+      margin-bottom: 16px;
+      flex: 1;
+    }
+    .resource-card-footer {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-top: auto;
+      padding-top: 16px;
+      border-top: 1px solid #eee;
+    }
+    .resource-price {
+      font-family: 'Nunito', sans-serif;
+      font-weight: 800;
+      font-size: 1.1rem;
+      color: var(--blue);
+    }
+    .resource-card-accent {
+      height: 5px;
+    }
+
+    .coming-card {
+      background: var(--off-white);
+      border-radius: var(--radius-lg);
+      padding: 32px;
+      border: 2px dashed #dde5ea;
+    }
+    .coming-card h3 {
+      font-size: 1.05rem;
+      margin-bottom: 8px;
+      color: var(--text-mid);
+    }
+    .coming-card p {
+      font-size: 0.9rem;
+      color: var(--text-light);
+    }
+
+    .free-resource {
+      background: var(--blue-dark);
+      border-radius: var(--radius-lg);
+      padding: 48px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 48px;
+      align-items: center;
+      margin-top: 64px;
+    }
+    .free-resource-text h2 { color: var(--white); font-size: 1.6rem; margin-bottom: 8px; }
+    .free-resource-text .yellow { color: var(--yellow); font-family:'Nunito',sans-serif; font-weight:700; font-size:1.05rem; margin-bottom:16px; }
+    .free-resource-text p { color: rgba(255,255,255,0.8); font-size:0.95rem; margin-bottom:8px; }
+    .free-resource-text ul { list-style:none; margin-top:12px; }
+    .free-resource-text ul li {
+      color: rgba(255,255,255,0.8);
+      font-size: 0.93rem;
+      margin-bottom: 8px;
+      padding-left: 20px;
+      position: relative;
+    }
+    .free-resource-text ul li::before {
+      content: '✓';
+      color: var(--yellow);
+      font-weight: 700;
+      position: absolute;
+      left: 0;
+    }
+
+    @media (max-width: 768px) {
+      .free-resource { grid-template-columns: 1fr; padding: 32px; }
+    }
+  </style>
+</head>
+<body>
+<div id="launch-banner" style="background:var(--blue-dark); color:var(--white); padding:16px 24px; text-align:center; font-family:var(--font-head); font-size:18px; font-weight:700; position:relative; z-index:200;"><span style="color:var(--yellow);">🚀 SSW Foundations launches June 23rd, 2026!</span> &nbsp;&nbsp;<span id="countdown-text" style="color:rgba(255,255,255,0.85); font-weight:400;"></span> &nbsp;&nbsp;<a href="ssw.html#ssw-optin" style="color:var(--yellow); text-decoration:underline; font-size:16px;">Join the waitlist →</a></div><script>(function(){var launch=new Date("2026-06-23T09:00:00");function tick(){var now=new Date();var diff=launch-now;if(diff<=0){document.getElementById("countdown-text").textContent="Doors are open!";return;}var d=Math.floor(diff/86400000);var h=Math.floor((diff%86400000)/3600000);var m=Math.floor((diff%3600000)/60000);var s=Math.floor((diff%60000)/1000);document.getElementById("countdown-text").textContent=d+"d "+h+"h "+m+"m "+s+"s away";}tick();setInterval(tick,1000);})();</script>
+
+<!-- NAV -->
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo">
+      <img src="logo.png" alt="Spark Literacy Innovations Group">
+    </a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="resources.html" class="active">Resources</a></li>
+      <li><a href="workshops.html">Workshops</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="resources.html" class="nav-cta">Browse resources</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- PAGE HERO -->
+<div class="page-hero" style="background:var(--blue); min-height:240px;">
+  <div class="page-hero-bg" style="background-image:url('img-writing-child.jpg');"></div>
+  <div class="page-hero-content">
+    <div class="hero-eyebrow">Everything here was made in practice!</div>
+    <h1>Resources</h1>
+    <p>Tested in real sessions. Built for real-life learning.</p>
+  </div>
+</div>
+
+<!-- MAIN RESOURCES -->
+<section class="section">
+  <div class="container">
+
+    <!-- WRITING PROGRAMS -->
+    <h2 style="font-size:1.4rem; margin-bottom:8px; padding-bottom:12px; border-bottom:2px solid var(--blue-light);">Writing programs</h2>
+
+    <div style="margin-top:28px;" class="grid-2">
+
+      <div class="resource-card">
+        <div class="resource-card-accent" style="background:var(--coral);"></div>
+        <div class="resource-card-top">
+          <div class="label label-coral">Writing</div>
+          <h3 style="font-size:1.2rem; margin-bottom:10px;">Structured Steps to Writing</h3>
+        </div>
+        <div class="resource-card-body">
+          <p>A complete, explicit and sequential writing program for tutors, intervention specialists, classroom teachers, and homeschooling families. 15-minute lessons. Fully scripted. Everything you need to take a student from their very first sentence to a finished multi-paragraph essay, starting wherever their skills are.</p>
+          <div class="resource-card-footer">
+            <div class="resource-price">From $39</div>
+            <a href="ssw.html" class="btn btn-coral btn-sm">Learn more →</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="coming-card" style="display:flex; flex-direction:column; justify-content:center;">
+        <div class="tag-coming">More coming</div>
+        <h3>More resources in development</h3>
+        <p>We're building explicit, systematic resources across writing, reading comprehension, and morphology. Join our list to be the first to know when new resources launch.</p>
+        <a href="#optin" class="btn btn-outline btn-sm" style="margin-top:20px; align-self:flex-start;">Keep me posted</a>
+      </div>
+
+    </div>
+
+    <!-- MORE COMING -->
+    <div style="background:var(--blue-light); border-radius:var(--radius-lg); padding:28px 32px; margin-top:32px; display:flex; align-items:center; justify-content:space-between; gap:24px; flex-wrap:wrap;">
+      <div>
+        <strong style="color:var(--blue); font-family:'Nunito',sans-serif;">Our resource library is growing!</strong><br>
+        <span style="font-size:0.95rem; color:var(--text-mid);">Sign up for our free Writing Starter Kit and you'll be the first to know when new resources are ready.</span>
+      </div>
+      <a href="#optin" class="btn btn-blue btn-sm">Sign up for updates</a>
+    </div>
+
+    <!-- FREE RESOURCE / OPT-IN -->
+    <div class="free-resource" id="optin">
+      <div class="free-resource-text">
+        <div class="accent-bar"></div>
+        <h2>Not sure where to start?</h2>
+        <div class="yellow">Grab your FREE Writing Starter Kit.</div>
+        <p>If you're watching a student struggle with writing and wondering why they're having such a hard time, this is a great place to begin.</p>
+        <ul>
+          <li>Why Does My Child or Student Struggle with Writing? A practical guide to understanding writing difficulties</li>
+          <li>Mini Writing Skills Screener: a quick tool to pinpoint exactly where support is needed</li>
+        </ul>
+      </div>
+      <div>
+        <!-- MAILERLITE FORM -->
+        <style type="text/css">
+        #mlb2-38673395.ml-form-embedContainer{box-sizing:border-box;display:table;margin:0 auto;position:static;width:100%!important}
+        #mlb2-38673395.ml-form-embedContainer .ml-form-embedWrapper{background-color:#ffffff;border-radius:12px;box-sizing:border-box;display:inline-block!important;margin:0;padding:0;position:relative;width:100%}
+        #mlb2-38673395.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody{padding:32px}
+        #mlb2-38673395.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-embedContent{margin:0 0 20px 0}
+        #mlb2-38673395.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-embedContent h4{color:#3b6f8d;font-family:'Nunito',sans-serif;font-size:1.2rem;font-weight:800;margin:0 0 8px 0;text-align:center}
+        #mlb2-38673395.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-embedContent p{color:#555;font-size:14px;line-height:20px;margin:0 0 10px 0;text-align:center}
+        #mlb2-38673395.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-fieldRow{margin:0 0 12px 0;width:100%}
+        #mlb2-38673395.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-fieldRow input{background-color:#fff!important;color:#333!important;border-color:#ddd;border-radius:8px!important;border-style:solid!important;border-width:1px!important;font-size:15px!important;padding:12px 14px!important;width:100%!important;box-sizing:border-box!important}
+        #mlb2-38673395.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-embedSubmit{margin:0 0 8px 0;float:left;width:100%}
+        #mlb2-38673395.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-embedSubmit button{background-color:#e66b5d!important;border:none!important;border-radius:8px!important;color:#fff!important;cursor:pointer;font-family:'Nunito',sans-serif!important;font-size:15px!important;font-weight:700!important;padding:13px!important;width:100%!important}
+        #mlb2-38673395.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-embedSubmit button:hover{background-color:#d45847!important}
+        #mlb2-38673395.ml-form-embedContainer .ml-form-embedWrapper .ml-form-successBody{padding:32px}
+        #mlb2-38673395.ml-form-embedContainer .ml-form-embedWrapper .ml-form-successBody .ml-form-successContent h4{color:#3b6f8d;font-family:'Nunito',sans-serif;font-size:1.2rem;font-weight:800;text-align:center}
+        #mlb2-38673395.ml-form-embedContainer .ml-form-embedWrapper .ml-form-successBody .ml-form-successContent p{color:#555;font-size:14px;text-align:center}
+        .ml-form-embedSubmitLoad{display:inline-block;width:20px;height:20px}
+        .ml-form-embedSubmitLoad:after{content:" ";display:block;width:11px;height:11px;margin:1px;border-radius:50%;border:4px solid #fff;border-color:#fff #fff #fff transparent;animation:spin 1.2s linear infinite}
+        @keyframes spin{0%{transform:rotate(0deg)}100%{transform:rotate(360deg)}}
+        .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);border:0}
+        </style>
+        <div id="mlb2-38673395" class="ml-form-embedContainer ml-subscribe-form ml-subscribe-form-38673395">
+          <div class="ml-form-align-center">
+            <div class="ml-form-embedWrapper embedForm">
+              <div class="ml-form-embedBody ml-form-embedBodyDefault row-form">
+                <div class="ml-form-embedContent">
+                  <h4>Send me the free resources!</h4>
+                  <p>Enter your details and we'll send them right to your inbox.</p>
+                </div>
+                <form class="ml-block-form" action="https://assets.mailerlite.com/jsonp/2186367/forms/182320185841026880/subscribe" data-code="" method="post" target="_blank">
+                  <div class="ml-form-formContent">
+                    <div class="ml-form-fieldRow">
+                      <div class="ml-field-group ml-field-name">
+                        <input aria-label="name" type="text" class="form-control" name="fields[name]" placeholder="Your name" autocomplete="given-name">
+                      </div>
+                    </div>
+                    <div class="ml-form-fieldRow ml-last-item">
+                      <div class="ml-field-group ml-field-email ml-validate-email ml-validate-required">
+                        <input aria-label="email" aria-required="true" type="email" class="form-control" name="fields[email]" placeholder="Your email" autocomplete="email">
+                      </div>
+                    </div>
+                  </div>
+                  <input type="hidden" name="ml-submit" value="1">
+                  <div class="ml-form-embedSubmit">
+                    <button type="submit" class="primary">Send me my free Starter Kit</button>
+                    <button disabled="disabled" style="display:none;" type="button" class="loading">
+                      <div class="ml-form-embedSubmitLoad"></div>
+                      <span class="sr-only">Loading...</span>
+                    </button>
+                  </div>
+                  <input type="hidden" name="anticsrf" value="true">
+                </form>
+              </div>
+              <div class="ml-form-successBody row-success" style="display:none">
+                <div class="ml-form-successContent">
+                  <h4>Thank you!</h4>
+                  <p><em>Your free resources are on their way. We're really glad you found us.</em></p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <script>function ml_webform_success_38673395(){var $=ml_jQuery||jQuery;$('.ml-subscribe-form-38673395 .row-success').show();$('.ml-subscribe-form-38673395 .row-form').hide()}</script>
+        <script src="https://groot.mailerlite.com/js/w/webforms.min.js?vb397d78ebaa8a0f631d35384c46d781b" type="text/javascript"></script>
+        <script>fetch("https://assets.mailerlite.com/jsonp/2186367/forms/182320185841026880/takel")</script>
+        <p style="text-align:center; font-size:13px; color:rgba(255,255,255,0.4); margin-top:12px;">No spam. Just useful resources and updates from Spark Literacy Innovations.</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <img src="SLI-logo.svg" alt="Spark Literacy Innovations Group" style="height:72px; width:auto; margin:0 auto 16px; display:block; mix-blend-mode:lighten; filter:brightness(1.1);">
+  <div class="footer-tagline">hello@slinnovations.com</div>
+  <ul class="footer-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="resources.html">Resources</a></li>
+    <li><a href="workshops.html">Workshops</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+  <hr class="footer-divider">
+  <ul class="footer-links" style="margin-bottom:16px;">
+    <li><a href="privacy.html">Privacy Policy</a></li>
+    <li><a href="terms.html">Terms &amp; Conditions</a></li>
+    <li><a href="refund.html">Refund Policy</a></li>
+  </ul>
+  <div class="footer-copy">© 2026 Spark Literacy Innovations Group. All rights reserved.</div>
+</footer>
+
+</body>
+</html>

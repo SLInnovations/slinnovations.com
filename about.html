@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us: Spark Literacy Innovations Group</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .about-hero-banner {
+      background: var(--blue);
+      padding: 64px 24px;
+      text-align: center;
+    }
+    .about-hero-banner h1 { color: var(--white); font-size: 2.2rem; margin-bottom: 12px; }
+    .about-hero-banner .sub {
+      color: rgba(255,255,255,0.85);
+      font-size: 1.2rem;
+      font-family: var(--font-head);
+      font-weight: 700;
+    }
+
+    .approach-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 56px;
+      align-items: start;
+    }
+
+    .belief-card {
+      background: var(--white);
+      border-radius: var(--radius-lg);
+      padding: 28px;
+      box-shadow: var(--shadow);
+      text-align: center;
+    }
+    .belief-card h3 { font-size: 1rem; color: var(--blue); margin-bottom: 10px; }
+    .belief-card p { font-size: 0.9rem; color: var(--text-mid); line-height: 1.65; }
+
+    .story-split {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 56px;
+      align-items: center;
+    }
+    .story-split p { color: var(--text-mid); margin-bottom: 16px; }
+
+    @media (max-width: 768px) {
+      .approach-grid, .story-split { grid-template-columns: 1fr; gap: 32px; }
+    }
+  </style>
+</head>
+<body>
+<div id="launch-banner" style="background:var(--blue-dark); color:var(--white); padding:16px 24px; text-align:center; font-family:var(--font-head); font-size:18px; font-weight:700; position:relative; z-index:200;"><span style="color:var(--yellow);">🚀 SSW Foundations launches June 23rd, 2026!</span> &nbsp;&nbsp;<span id="countdown-text" style="color:rgba(255,255,255,0.85); font-weight:400;"></span> &nbsp;&nbsp;<a href="ssw.html#ssw-optin" style="color:var(--yellow); text-decoration:underline; font-size:16px;">Join the waitlist →</a></div><script>(function(){var launch=new Date("2026-06-23T09:00:00");function tick(){var now=new Date();var diff=launch-now;if(diff<=0){document.getElementById("countdown-text").textContent="Doors are open!";return;}var d=Math.floor(diff/86400000);var h=Math.floor((diff%86400000)/3600000);var m=Math.floor((diff%3600000)/60000);var s=Math.floor((diff%60000)/1000);document.getElementById("countdown-text").textContent=d+"d "+h+"h "+m+"m "+s+"s away";}tick();setInterval(tick,1000);})();</script>
+
+<!-- NAV -->
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo">
+      <img src="logo.png" alt="Spark Literacy Innovations Group">
+    </a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="resources.html">Resources</a></li>
+      <li><a href="workshops.html">Workshops</a></li>
+      <li><a href="about.html" class="active">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="resources.html#optin" class="nav-cta">Free starter kit</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- HERO -->
+<div class="page-hero" style="background:var(--blue); min-height:280px;">
+  <div class="page-hero-bg" style="background-image:url('img-books-stack.jpg'); opacity:0.22;"></div>
+  <div class="page-hero-content">
+    <div class="hero-eyebrow">Practitioners first.</div>
+    <h1>Who we are</h1>
+    <p>Everything we create comes from that.</p>
+  </div>
+</div>
+
+<!-- OUR APPROACH -->
+<section class="section">
+  <div class="container">
+    <div class="approach-grid">
+      <div>
+        <div class="accent-bar"></div>
+        <h2 style="font-size:1.9rem; margin-bottom:20px;">Our approach</h2>
+        <p style="color:var(--text-mid); margin-bottom:16px;">We believe every learner deserves access to high-quality, evidence-based literacy instruction. Our resources are designed to give educators and practitioners the tools they need to make a real difference, without spending hours building those tools from scratch.</p>
+        <p style="color:var(--text-mid); margin-bottom:16px;">Our resources are informed by the science of reading and Orton-Gillingham methodology. We draw on the work of researchers like Ehri and Kilpatrick, and filter everything through the lens of what actually works in practice. That combination of research awareness and practical experience is what makes our materials different.</p>
+        <p style="color:var(--text-mid);">We approach resource design the same way we approach teaching: with care, with evidence, and with the real student in front of us always in mind.</p>
+      </div>
+      <div style="background:var(--blue-light); border-radius:var(--radius-lg); padding:48px; display:flex; flex-direction:column; align-items:center; justify-content:center; text-align:center;">
+        <div style="text-align:center;">
+          <div style="font-family:var(--font-head); font-weight:800; font-size:2.8rem; color:var(--blue); line-height:1; text-align:center;">25+</div>
+          <div style="color:var(--text-mid); font-size:0.95rem; margin-bottom:32px; text-align:center; max-width:240px;">years of combined experience in explicit, systematic literacy instruction</div>
+          <div style="font-family:var(--font-head); font-weight:800; font-size:2rem; color:var(--coral); line-height:1;">OG certified.</div>
+          <div style="color:var(--text-mid); font-size:0.9rem;">Practitioner trained.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHAT WE BELIEVE -->
+<section class="section" style="background:var(--yellow);">
+  <div class="container">
+    <h2 style="text-align:center; font-size:1.8rem; margin-bottom:40px;">What we believe</h2>
+    <div class="grid-3">
+      <div class="belief-card">
+        <div class="card-dot card-dot-coral" style="margin:0 auto 16px;"></div>
+        <h3>Every learner deserves skilled instruction</h3>
+        <p>Access to high-quality, evidence-based literacy instruction shouldn't depend on where you live or how much you can afford. We want to make excellent resources available to as many educators as possible.</p>
+      </div>
+      <div class="belief-card">
+        <div class="card-dot card-dot-blue" style="margin:0 auto 16px;"></div>
+        <h3>Good tools make great teachers better</h3>
+        <p>You already know your students. Our job is to give you materials that are worthy of your expertise and easy to put into practice.</p>
+      </div>
+      <div class="belief-card">
+        <div class="card-dot" style="background:var(--blue-dark); margin:0 auto 16px;"></div>
+        <h3>Community makes us all stronger</h3>
+        <p>We are part of the science of reading community, not just selling to it. We mentor, supervise, and collaborate with practitioners because we believe we grow together.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- OUR STORY -->
+<section class="section" style="background:var(--blue-light);">
+  <div class="container">
+    <div class="story-split">
+      <div style="border-radius:var(--radius-lg); overflow:hidden; min-height:380px;">
+        <img src="img-reader-feet.jpg" alt="Person reading on a stack of books" style="width:100%; height:100%; min-height:380px; object-fit:cover;">
+      </div>
+      <div>
+        <div class="accent-bar"></div>
+        <h2 style="font-size:1.9rem; margin-bottom:20px;">Our story</h2>
+        <p>Spark Literacy Innovations started the way most good things do: out of necessity.</p>
+        <p>After years of creating custom materials for our own tutoring and coaching practices, we realised two things. First, what we were making was actually really good. Second, other practitioners needed the same things we did, and were spending just as much time making them from scratch.</p>
+        <p>So we decided to do something about it. Spark Literacy Innovations is the result: a growing library of explicit, systematic, evidence-aligned resources built by people who have spent over 20 years in the field, teaching students, mentoring practitioners, and supervising Orton-Gillingham practitioners. We are proud of what we make and we hope you will be too.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section style="background:var(--coral); padding:64px 24px; text-align:center;">
+  <div class="container">
+    <div class="accent-bar" style="margin:0 auto 16px;"></div>
+    <h2 style="color:var(--white); font-size:1.8rem; margin-bottom:16px;">Ready to see what we've built?</h2>
+    <p style="color:rgba(255,255,255,0.8); max-width:480px; margin:0 auto 32px;">Browse our growing library of explicit, systematic materials designed to save you time and support your students.</p>
+    <a href="resources.html" class="btn btn-coral">Browse the resources</a>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <img src="SLI-logo.svg" alt="Spark Literacy Innovations Group" style="height:72px; width:auto; margin:0 auto 16px; display:block; mix-blend-mode:lighten; filter:brightness(1.1);">
+  <div class="footer-tagline">hello@slinnovations.com</div>
+  <ul class="footer-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="resources.html">Resources</a></li>
+    <li><a href="workshops.html">Workshops</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+  <hr class="footer-divider">
+  <ul class="footer-links" style="margin-bottom:16px;">
+    <li><a href="privacy.html">Privacy Policy</a></li>
+    <li><a href="terms.html">Terms &amp; Conditions</a></li>
+    <li><a href="refund.html">Refund Policy</a></li>
+  </ul>
+  <div class="footer-copy">© 2026 Spark Literacy Innovations Group. All rights reserved.</div>
+</footer>
+
+</body>
+</html>
