@@ -642,9 +642,12 @@ img { max-width: 100%; height: auto; display: block; }
     .pricing-card.featured-card {
       border: 2px solid var(--coral);
       position: relative;
+      overflow: visible;
+      margin-top: 14px;
     }
     .pricing-card.featured-card .pricing-card-header {
       background: var(--coral);
+      border-radius: var(--radius-lg) var(--radius-lg) 0 0;
     }
     .pricing-card.featured-card .pricing-card-header h3 { color: var(--white); }
     .pricing-card.featured-card .pricing-card-header p { color: rgba(255,255,255,0.8); }
@@ -777,8 +780,7 @@ img { max-width: 100%; height: auto; display: block; }
     </a>
     <ul class="nav-links">
       <li><a href="index.html">Home</a></li>
-      <li><a href="resources.html" class="active">Resources</a></li>
-      <li><a href="ssw.html">Structured Steps to Writing</a></li>
+      <li><a href="ssw.html">SSW</a></li>
       <li><a href="workshops.html">Workshops</a></li>
       <li><a href="about.html">About</a></li>
       <li><a href="contact.html">Contact</a></li>
@@ -794,7 +796,6 @@ img { max-width: 100%; height: auto; display: block; }
       <div class="hero-badges">
         <span class="hero-badge yellow">Now available</span>
         <span class="hero-badge">Explicit & systematic</span>
-        <span class="hero-badge">OG certified</span>
       </div>
       <img src="sswlogo.png" alt="Structured Steps to Writing" style="max-width:300px; margin-bottom:20px; display:block;">
       <h1 style="position:absolute; left:-9999px;">Structured Steps to Writing</h1>
@@ -827,30 +828,30 @@ img { max-width: 100%; height: auto; display: block; }
     <div class="ssw-hero-card" style="margin-top:0;">
       <h3>Start here</h3>
 
-      <div class="price-option">
+      <a href="#buy-screener" class="price-option" style="display:block; text-decoration:none; color:inherit;">
         <div class="price-option-name">Writing Skills Placement Screener</div>
         <div class="price-option-desc">Find out exactly where your student needs to begin</div>
         <div class="price-option-price">$25</div>
-      </div>
+      </a>
 
-      <div class="price-option featured">
+      <a href="#buy-foundations" class="price-option featured" style="display:block; text-decoration:none; color:inherit;">
         <div class="price-option-badge">Best value</div>
         <div class="price-option-name">Foundations Bundle</div>
         <div class="price-option-desc">All 4 units together</div>
         <div class="price-option-price">$119 <span>vs $136 separately</span></div>
-      </div>
+      </a>
 
-      <div class="price-option">
+      <a href="#buy-units" class="price-option" style="display:block; text-decoration:none; color:inherit;">
         <div class="price-option-name">Individual units</div>
         <div class="price-option-desc">Units 1–4 available separately</div>
         <div class="price-option-price">$34 <span>per unit</span></div>
-      </div>
+      </a>
 
-      <div class="price-option">
+      <a href="#buy-go-bundle" class="price-option" style="display:block; text-decoration:none; color:inherit;">
         <div class="price-option-name">Writing Revision & Brainstorming Bundle</div>
         <div class="price-option-desc">CAMPS + SPARK+SORT graphic organizers</div>
         <div class="price-option-price">$15</div>
-      </div>
+      </a>
 
       <div class="hero-card-cta">
         <a href="#pricing" class="btn btn-blue" style="width:100%; text-align:center; display:block; box-sizing:border-box;">View all options</a>
@@ -1092,7 +1093,7 @@ img { max-width: 100%; height: auto; display: block; }
     <p style="text-align:center; color:var(--text-mid); max-width:520px; margin:0 auto 48px;">Not sure where your student needs to begin? Start with the screener. Ready to go? Grab the Foundations Bundle or start with a single unit.</p>
 
     <!-- SCREENER BAND -->
-    <div class="screener-band">
+    <div class="screener-band" id="buy-screener">
       <div>
         <h3>Not sure where to begin?</h3>
         <p>The Writing Skills Placement Screener takes about 20 minutes to administer and tells you exactly which unit to start in. A small investment before a bigger one.</p>
@@ -1107,7 +1108,7 @@ img { max-width: 100%; height: auto; display: block; }
     <div class="grid-3" style="align-items:start; margin-bottom:32px;">
 
       <!-- INDIVIDUAL UNITS -->
-      <div class="pricing-card">
+      <div class="pricing-card" id="buy-units">
         <div class="pricing-card-header">
           <div class="label label-blue">Individual units</div>
           <h3 style="font-size:1.05rem;">Units 1–4</h3>
@@ -1127,7 +1128,7 @@ img { max-width: 100%; height: auto; display: block; }
       </div>
 
       <!-- FOUNDATIONS BUNDLE -->
-      <div class="pricing-card featured-card" style="position:relative;">
+      <div class="pricing-card featured-card" id="buy-foundations" style="position:relative;">
         <div class="pricing-featured-badge">Best value</div>
         <div class="pricing-card-header">
           <div class="label" style="background:rgba(255,255,255,0.25); color:var(--white);">Foundations bundle</div>
@@ -1149,7 +1150,7 @@ img { max-width: 100%; height: auto; display: block; }
       </div>
 
       <!-- WRITING REVISION BUNDLE -->
-      <div class="pricing-card">
+      <div class="pricing-card" id="buy-go-bundle">
         <div class="pricing-card-header">
           <div class="label label-coral">Standalone tools</div>
           <h3 style="font-size:1.05rem;">Writing Revision & Brainstorming Bundle</h3>
