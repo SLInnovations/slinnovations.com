@@ -28,6 +28,9 @@
 * { box-sizing: border-box; margin: 0; padding: 0; }
 html { scroll-behavior: smooth; }
 
+/* Prevent horizontal overflow on all screens (mobile Safari fix) */
+html, body { max-width: 100%; overflow-x: hidden; }
+
 body {
   font-family: var(--font-body);
   font-size: 17px;
@@ -285,6 +288,8 @@ img { max-width: 100%; height: auto; display: block; }
   .hero-split-text { padding: 48px 32px; }
   .nav-links { display: none; }
   .nav-hamburger { display: flex; }
+  .nav-inner { height: 84px; }
+  .nav-logo img { height: 64px; }
   .section { padding: 48px 0; }
   h1 { font-size: 1.9rem !important; }
   h2 { font-size: 1.6rem !important; }
