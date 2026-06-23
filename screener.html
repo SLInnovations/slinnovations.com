@@ -269,31 +269,6 @@ img { max-width: 100%; height: auto; display: block; }
   margin-bottom: 12px;
 }
 
-
-    /* === MOBILE + SHARED FIXES (injected) === */
-    html, body { max-width: 100%; overflow-x: hidden; }
-    .footer-socials { display: flex; justify-content: center; gap: 16px; margin-bottom: 24px; }
-    .footer-socials a { display: flex; align-items: center; justify-content: center; width: 38px; height: 38px; border-radius: 50%; background: rgba(255,255,255,0.1); transition: background 0.2s; }
-    .footer-socials a:hover { background: var(--coral); text-decoration: none; }
-    .footer-socials svg { width: 18px; height: 18px; fill: rgba(255,255,255,0.75); }
-    .footer-socials a:hover svg { fill: #ffffff; }
-    .nav-hamburger { display: none; flex-direction: column; justify-content: center; gap: 5px; background: none; border: none; cursor: pointer; padding: 8px; z-index: 200; }
-    .nav-hamburger span { display: block; width: 26px; height: 3px; background: var(--blue); border-radius: 2px; transition: all 0.3s; }
-    .nav-hamburger.open span:nth-child(1) { transform: translateY(8px) rotate(45deg); }
-    .nav-hamburger.open span:nth-child(2) { opacity: 0; }
-    .nav-hamburger.open span:nth-child(3) { transform: translateY(-8px) rotate(-45deg); }
-    .nav-mobile-menu { display: none; position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: var(--white); z-index: 150; flex-direction: column; align-items: center; justify-content: center; gap: 32px; }
-    .nav-mobile-menu.open { display: flex; }
-    .nav-mobile-menu a { font-family: var(--font-head); font-weight: 800; font-size: 1.6rem; color: var(--blue); text-decoration: none; }
-    .nav-mobile-menu a:hover { color: var(--coral); }
-    .nav-mobile-menu .nav-cta { background: var(--coral) !important; color: var(--white) !important; padding: 14px 32px; border-radius: 8px; font-size: 1.2rem !important; }
-    @media (max-width: 768px) {
-      .nav-links { display: none; }
-      .nav-hamburger { display: flex; }
-      .nav-inner { height: 84px; }
-      .nav-logo img { height: 64px; }
-    }
-    /* === END INJECTED FIXES === */
 </style>
   <style>
     .screener-hero {
@@ -514,7 +489,7 @@ img { max-width: 100%; height: auto; display: block; }
     </div>
 
     <div class="buy-card">
-      <div class="buy-card-price">$25</div>
+      <div class="buy-card-price">$25 <span style="font-size:0.9rem; color:var(--text-light); font-weight:400;">USD</span></div>
       <div class="buy-card-sub">One-time purchase · Instant download via ThriveCart</div>
       <ul class="buy-card-includes">
         <li>Instructor Recording Booklet</li>
@@ -652,6 +627,7 @@ img { max-width: 100%; height: auto; display: block; }
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12c0 4.24 2.65 7.86 6.39 9.29-.09-.78-.17-1.98.04-2.83.18-.77 1.22-5.17 1.22-5.17s-.31-.62-.31-1.54c0-1.45.84-2.53 1.88-2.53.89 0 1.32.67 1.32 1.47 0 .89-.57 2.23-.87 3.47-.25 1.04.52 1.88 1.54 1.88 1.85 0 3.27-1.95 3.27-4.76 0-2.49-1.79-4.23-4.34-4.23-2.96 0-4.69 2.22-4.69 4.51 0 .89.34 1.85.77 2.37.08.1.09.19.07.29-.08.32-.25 1.04-.28 1.18-.04.19-.14.23-.32.14-1.25-.58-2.03-2.42-2.03-3.89 0-3.15 2.29-6.05 6.61-6.05 3.47 0 6.16 2.47 6.16 5.77 0 3.45-2.17 6.22-5.19 6.22-1.01 0-1.97-.53-2.3-1.15l-.62 2.33c-.23.87-.84 1.96-1.25 2.62.94.29 1.94.45 2.97.45 5.52 0 10-4.48 10-10S17.52 2 12 2z"/></svg>
     </a>
   </div>
+  <div class="footer-copy" style="margin-bottom:6px;">Prices shown in US dollars (USD).</div>
   <div class="footer-copy">© 2026 Spark Literacy Innovations Group. All rights reserved.</div>
 </footer>
 
