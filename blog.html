@@ -34,6 +34,11 @@
     .post-card .read-more { font-family: var(--font-head); font-weight: 700; color: var(--blue); font-size: 0.95rem; }
     .post-card:hover .read-more { color: var(--coral); }
     .blog-empty { text-align: center; color: var(--text-mid); padding: 40px 0; }
+
+    .blog-header { background: var(--white); padding: 32px 24px 8px; text-align: center; }
+    .blog-header img { max-width: 760px; width: 100%; height: auto; margin: 0 auto; border-radius: var(--radius); }
+    .blog-header .hero-eyebrow { margin: 20px auto 0; color: var(--text-mid); }
+    .visually-hidden { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0; }
   </style>
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-MTDVGR5LZT"></script>
@@ -98,14 +103,11 @@
 })();
 </script>
 
-<!-- PAGE HERO -->
-<div class="page-hero" style="background:var(--blue); min-height:240px;">
-  <div class="page-hero-bg" style="background-image:url('img-writing-child.jpg');"></div>
-  <div class="page-hero-content">
-    <div class="hero-eyebrow">Practical. Honest. From people who teach this.</div>
-    <h1>The Spark!</h1>
-    <p>Writing about teaching writing, for the people piecing it together.</p>
-  </div>
+<!-- PAGE HEADER -->
+<div class="blog-header">
+  <img src="blog-header-spark.png" alt="The Spark! Explicit, systematic, and built for real teaching.">
+  <h1 class="visually-hidden">The Spark!</h1>
+  <div class="hero-eyebrow">Practical. Honest. From people who teach this.</div>
 </div>
 
 <!-- POST LIST -->
