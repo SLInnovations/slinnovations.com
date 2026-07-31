@@ -77,7 +77,7 @@
   </url>
   <url>
     <loc>https://slinnovations.com/blog.html</loc>
-    <lastmod>2026-06-26</lastmod>
+    <lastmod>2026-07-31</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
@@ -93,6 +93,11 @@
   <url>
     <loc>https://slinnovations.com/blog-we-do-it-for-phonics.html</loc>
     <lastmod>2026-07-02</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://slinnovations.com/blog-back-to-school-writing.html</loc>
+    <lastmod>2026-07-31</lastmod>
     <priority>0.6</priority>
   </url>
 </urlset>
