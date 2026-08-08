@@ -43,7 +43,6 @@
       background:var(--white); display:flex; flex-direction:column; text-align:center; }
     .tcard-coral{ border-color:var(--coral); }
     .tcard-quiet{ border-color:var(--line); background:var(--off-white); }
-    .tcard .ph{ margin-bottom:22px; }
     .tcard h3{ font-size:1.45rem; margin-bottom:4px; color:var(--blue); }
     .tcard-coral h3{ color:var(--coral); }
     .tcard-quiet h3{ color:var(--text-mid); }
@@ -55,15 +54,6 @@
     .label-quiet{ background:#e6ebee; color:var(--text-mid); }
     .label-solid{ background:var(--yellow); color:var(--blue-dark); }
 
-    /* placeholder, delete as images arrive */
-    .ph{ border:2px dashed var(--blue); border-radius:var(--radius-lg); background:var(--blue-light);
-      display:flex; flex-direction:column; align-items:center; justify-content:center;
-      text-align:center; padding:20px; gap:6px; }
-    .ph-name{ font-family:ui-monospace,Menlo,monospace; font-size:11px; font-weight:700;
-      color:var(--blue-dark); background:var(--white); border-radius:6px; padding:4px 10px; }
-    .ph-note{ font-size:12.5px; color:var(--blue-dark); max-width:34ch; line-height:1.45; }
-    .ph-4x3{ aspect-ratio:4/3; }
-    .ph-1x1{ aspect-ratio:1/1; }
 
     /* GO sets block */
     .go-block{ display:grid; grid-template-columns:1fr 1.15fr; gap:44px; align-items:center; }
@@ -74,7 +64,6 @@
     /* four tools */
     .tools-grid{ display:grid; grid-template-columns:repeat(4,1fr); gap:24px; }
     .tool{ text-align:center; }
-    .tool .ph{ margin-bottom:14px; }
     .tool h4{ font-size:1rem; color:var(--blue); letter-spacing:.02em; }
     .tool p{ font-size:14.5px; color:var(--text-mid); margin-top:4px; }
 
@@ -177,9 +166,8 @@
       </div>
 
       <div class="tcard tcard-quiet">
-        <div class="ph ph-4x3">
-          <span class="ph-name">tier-composition.png</span>
-          <span class="ph-note">Optional. A muted or greyscale treatment so it reads as not-yet-available</span>
+        <div style="background:var(--off-white); border:1px solid var(--line); border-radius:var(--radius-lg); aspect-ratio:4/3; display:flex; align-items:center; justify-content:center; margin-bottom:22px;">
+          <span style="font-family:var(--font-head); font-weight:800; font-size:1.1rem; color:var(--text-light); letter-spacing:.04em;">Coming soon</span>
         </div>
         <span class="label label-quiet">In development</span>
         <h3>Composition</h3>
