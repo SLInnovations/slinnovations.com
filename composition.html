@@ -4,54 +4,36 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" type="image/svg+xml" href="favicon.svg">
-  <title>CAMPS and SPARK+SORT graphic organizer sets: Spark Literacy Innovations Group</title>
-  <meta name="description" content="The CAMPS editing and SPARK+SORT brainstorming graphic organizer sets from Structured Steps to Writing. Three differentiated versions of each set, every one with a visual anchor chart.">
-  <link rel="canonical" href="https://slinnovations.com/go-sets.html">
+  <title>Composition tier: Spark Literacy Innovations Group</title>
+  <meta name="description" content="Structured Steps to Writing: an explicit, systematic writing program built by OG-certified practitioners. See what makes it different.">
+  <link rel="canonical" href="https://slinnovations.com/composition.html">
   <meta property="og:type" content="website">
   <meta property="og:title" content="Structured Steps to Writing: Spark Literacy Innovations Group">
   <meta property="og:description" content="Structured Steps to Writing: an explicit, systematic writing program built by OG-certified practitioners. See what makes it different.">
-  <meta property="og:url" content="https://slinnovations.com/go-sets.html">
+  <meta property="og:url" content="https://slinnovations.com/composition.html">
   <meta property="og:image" content="https://slinnovations.com/img-books-stack.jpg">
   <meta property="og:site_name" content="Spark Literacy Innovations Group">
   <meta name="twitter:card" content="summary_large_image">
   <link rel="stylesheet" href="style.css">
   <style>
-    /* GO SETS page components. These move into style.css at rebuild. */
-    :root{ --coral-dark:#d45847; --line:#e6ebee; --radius-xl:24px; }
+    :root{ --line:#e6ebee; --radius-xl:24px; }
     .band{ padding:88px 0; } .band-sm{ padding:56px 0; }
     .bg-pale{ background:var(--off-white); }
     .eyebrow{ font-family:var(--font-head); font-weight:800; font-size:12px;
       letter-spacing:.14em; text-transform:uppercase; color:var(--coral); }
-    .set-grid{ display:grid; grid-template-columns:repeat(3,1fr); gap:28px; align-items:stretch; }
-    .set{ border:3px solid var(--blue); border-radius:var(--radius-xl); padding:26px;
-      background:var(--white); display:flex; flex-direction:column; }
-    .set-coral{ border-color:var(--coral); }
-    .set-feature{ border-color:var(--yellow); position:relative; }
-    .set .ph{ margin-bottom:20px; }
-    .set h3{ font-size:1.25rem; margin-bottom:6px; color:var(--blue); }
-    .set-coral h3{ color:var(--coral); }
-    .set p{ color:var(--text-mid); font-size:15.5px; margin-bottom:14px; }
-    .set ul{ list-style:none; margin-bottom:18px; }
-    .set li{ font-size:14.5px; color:var(--text-mid); padding:5px 0 5px 22px; position:relative; }
-    .set li::before{ content:'\2713'; color:var(--blue); font-weight:700; position:absolute; left:0; }
-    .set-coral li::before{ color:var(--coral); }
-    .set-feature li::before{ color:#9a7800; }
-    .set-price{ font-family:var(--font-head); font-weight:800; font-size:1.8rem;
-      color:var(--blue); line-height:1; margin-bottom:16px; }
-    .set-coral .set-price{ color:var(--coral); }
-    .set-feature .set-price{ color:#9a7800; }
-    .set-price .was{ font-size:.95rem; color:var(--text-light); text-decoration:line-through;
-      font-weight:400; margin-left:8px; }
-    .set .btn{ margin-top:auto; display:block; width:100%; text-align:center; box-sizing:border-box; }
-    .badge{ position:absolute; top:-13px; left:50%; transform:translateX(-50%);
-      background:var(--yellow); color:var(--blue-dark); font-family:var(--font-head);
-      font-weight:800; font-size:11px; letter-spacing:.06em; text-transform:uppercase;
-      padding:4px 16px; border-radius:999px; white-space:nowrap; }
-    .ph{ border:2px dashed var(--blue); border-radius:var(--radius-lg); background:var(--blue-light);
-      display:flex; flex-direction:column; align-items:center; justify-content:center;
-      text-align:center; padding:18px; gap:6px; aspect-ratio:4/3; }
-    .ph-name{ font-family:ui-monospace,Menlo,monospace; font-size:11px; font-weight:700;
-      color:var(--blue-dark); background:var(--white); border-radius:6px; padding:4px 10px; }
+    .lede{ font-size:1.15rem; color:var(--text-mid); max-width:56ch; margin:0 auto; }
+    .arc{ display:grid; grid-template-columns:repeat(3,1fr); gap:18px; }
+    .arc-step{ border-radius:var(--radius-lg); padding:26px 22px; text-align:center; }
+    .arc-done{ background:var(--blue-light); }
+    .arc-part{ background:var(--yellow-pale); }
+    .arc-here{ background:var(--blue); }
+    .arc-step h3{ font-size:1.15rem; margin-bottom:4px; }
+    .arc-here h3{ color:var(--white); }
+    .arc-step .u{ font-family:var(--font-head); font-weight:700; font-size:12px;
+      color:var(--text-light); letter-spacing:.05em; margin-bottom:8px; }
+    .arc-here .u{ color:rgba(255,255,255,.7); }
+    .arc-step p{ font-size:14.5px; color:var(--text-mid); }
+    .arc-here p{ color:rgba(255,255,255,.85); }
     .strip{ background:var(--blue-dark); border-radius:var(--radius-xl); padding:40px 44px;
       display:grid; grid-template-columns:1fr auto; gap:32px; align-items:center; }
     .strip h3{ color:var(--white); font-size:1.4rem; margin-bottom:8px; }
@@ -59,7 +41,7 @@
     .ssw-cta{ background:var(--coral); padding:72px 0; text-align:center; }
     .ssw-cta h2{ color:var(--white); font-size:2rem; margin-bottom:16px; }
     .ssw-cta p{ color:rgba(255,255,255,.8); max-width:480px; margin:0 auto 32px; }
-    @media (max-width:900px){ .set-grid,.strip{ grid-template-columns:1fr; }
+    @media (max-width:900px){ .arc,.strip{ grid-template-columns:1fr; }
       .band{ padding:60px 0; } .strip{ text-align:center; justify-items:center; } }
   </style>
 <!-- Google tag (gtag.js) -->
@@ -96,75 +78,64 @@
 </nav>
 
 <section class="band">
-  <div class="container" style="text-align:center; max-width:680px;">
+  <div class="container" style="text-align:center;">
     <div class="eyebrow">Structured Steps to Writing</div>
-    <h1 style="font-size:clamp(2rem,4vw,2.8rem); margin:14px 0 16px;">The graphic organizer sets</h1>
-    <p style="font-size:1.12rem; color:var(--text-mid);">CAMPS for editing, SPARK+SORT for generating ideas. Three differentiated versions of each, every one with a visual anchor chart, so you can match the tool to where a student actually is.</p>
+    <h1 style="font-size:clamp(2rem,4vw,2.9rem); margin:14px 0 16px;">Composition</h1>
+    <p class="lede">Units 10 to 12. Essay planning and multi-genre composition. This tier is in development.</p>
   </div>
 </section>
 
 <section class="band-sm bg-pale">
   <div class="container">
-    <div class="set-grid">
-
-      <div class="set">
-        <img src="go-camps.png" alt="The CAMPS editing organizer, anchor chart and differentiated versions" style="border-radius:var(--radius-lg);">
-        <h3>CAMPS editing set</h3>
-        <p>A systematic editing process students learn rather than guess at. Capitalization, Agreement, Meaning, Punctuation, Spelling. In order, every time.</p>
-        <ul>
-          <li>Version 1, foundational with high support</li>
-          <li>Version 2, intermediate</li>
-          <li>Version 3, independent with reduced scaffolding</li>
-          <li>Visual anchor chart with every version</li>
-        </ul>
-        <div class="set-price">$9 <span style="font-size:.85rem; color:var(--text-light); font-weight:400;">USD</span></div>
-        <a href="https://sparkliteracyinnovations.thrivecart.com/ssw-camps-graphic-organizer-set/" class="btn btn-blue" target="_blank" rel="noopener">Buy CAMPS, $9</a>
+    <div class="arc">
+      <div class="arc-step arc-done">
+        <div class="u">Units 1 to 4</div>
+        <h3>Foundations</h3>
+        <p>Building sentences. Complete and available now.</p>
       </div>
-
-      <div class="set set-feature">
-        <span class="badge">Best value</span>
-        <img src="go-bundle.png" alt="CAMPS and SPARK+SORT organizers and anchor charts together" style="border-radius:var(--radius-lg);">
-        <h3 style="color:#9a7800;">Foundations Graphic Organizer Bundle</h3>
-        <p>Both sets together. All 6 differentiated versions and every anchor chart, in one purchase.</p>
-        <ul>
-          <li>Everything in the CAMPS set</li>
-          <li>Everything in the SPARK+SORT set</li>
-          <li>All 6 differentiated versions</li>
-          <li>All visual anchor charts</li>
-        </ul>
-        <div class="set-price">$15 <span class="was">$18</span> <span style="font-size:.85rem; color:var(--text-light); font-weight:400;">USD</span></div>
-        <a href="https://sparkliteracyinnovations.thrivecart.com/ssw-foundations-graphic-organizer-bundle/" class="btn btn-coral" target="_blank" rel="noopener">Buy the bundle, $15</a>
+      <div class="arc-step arc-part">
+        <div class="u">Units 5 to 9</div>
+        <h3>Framework</h3>
+        <p>Paragraph writing. Unit 5 is available, the rest are in development.</p>
       </div>
-
-      <div class="set set-coral">
-        <img src="go-spark-sort.png" alt="The SPARK and SORT brainstorming organizer and anchor chart" style="border-radius:var(--radius-lg);">
-        <h3>SPARK+SORT brainstorming set</h3>
-        <p>Before a student writes a word, they need ideas. SPARK is the pour-it-all-out stage. SORT is where they choose the strongest and find a focus.</p>
-        <ul>
-          <li>Version 1, foundational with high support</li>
-          <li>Version 2, intermediate</li>
-          <li>Version 3, independent with reduced scaffolding</li>
-          <li>Works at sentence and paragraph level</li>
-          <li>Visual anchor chart with every version</li>
-        </ul>
-        <div class="set-price">$9 <span style="font-size:.85rem; color:var(--text-light); font-weight:400;">USD</span></div>
-        <a href="https://sparkliteracyinnovations.thrivecart.com/ssw-sparksort-graphic-organizer-set/" class="btn btn-coral" target="_blank" rel="noopener">Buy SPARK+SORT, $9</a>
+      <div class="arc-step arc-here">
+        <div class="u">Units 10 to 12</div>
+        <h3>Composition</h3>
+        <p>Essay planning and multi-genre composition.</p>
       </div>
-
     </div>
-    <div style="background:var(--yellow-pale); border-radius:var(--radius-lg); padding:22px 28px; margin-top:32px; text-align:center;">
-      <p style="color:var(--text-mid); font-size:15.5px; margin:0;">Already buying SSW units? The graphic organizers are included in the units, so you do not need these sets as well. They are here for anyone who wants the tools on their own.</p>
-    </div>
-    <p style="text-align:center; color:var(--text-light); font-size:.88rem; margin-top:22px;">All prices are in US dollars (USD). Files are delivered through your account.</p>
   </div>
 </section>
 
 <section class="band">
   <div class="container" style="max-width:680px;">
     <div class="accent-bar" style="margin-bottom:18px;"></div>
-    <h2 style="font-size:1.6rem; margin-bottom:16px;">Who these suit</h2>
-    <p style="color:var(--text-mid); margin-bottom:16px;">Tutors and resource teachers working 1:1 or in small groups, and homeschool families who want an explicit editing and brainstorming routine without committing to a full program.</p>
-    <p style="color:var(--text-mid);">The differentiated versions exist because students in the same group are rarely in the same place. A student who needs every step spelled out and a student ready to work independently can use the same tool at the same table.</p>
+    <h2 style="font-size:1.7rem; margin-bottom:16px;">Where the sequence has been heading</h2>
+    <p style="color:var(--text-mid); margin-bottom:18px;">Foundations teaches a student to write a sentence. Framework teaches them to build a paragraph, then several that hold together. Composition is where those paragraphs become a finished piece with a plan behind it.</p>
+    <p style="color:var(--text-mid); margin-bottom:18px;">The same four tools carry through. SPARK+SORT still generates and narrows the ideas. STEMS still builds the paragraphs. CAMPS still handles the editing. Checklists still open and close the piece. A student arriving in Composition has been using all four since their first lesson.</p>
+  </div>
+</section>
+
+<section class="band-sm bg-pale">
+  <div class="container" style="max-width:680px;">
+    <h2 style="font-size:1.5rem; margin-bottom:22px;">The three units</h2>
+
+    <h3 style="font-size:1.1rem; color:var(--coral); margin-bottom:6px;">Unit 10, Opinion writing</h3>
+    <p style="color:var(--text-mid); margin-bottom:20px;">Opinion against fact, then structure: an introduction that states a position, body paragraphs built with STEMS, and a conclusion with a call to action. Students learn to support an opinion with evidence, move between reasons, and address a counterargument. The unit ends with a complete multi-paragraph piece, planned, drafted, revised, and edited.</p>
+
+    <h3 style="font-size:1.1rem; color:var(--coral); margin-bottom:6px;">Unit 11, Informative writing</h3>
+    <p style="color:var(--text-mid); margin-bottom:20px;">Teaching or explaining a topic rather than arguing a position. Students organize information by category, by sequence, or by comparison, and integrate facts using signal phrases. This is also where citation is taught explicitly: why we cite, signal phrases, in-text citations, and a Works Cited page.</p>
+
+    <h3 style="font-size:1.1rem; color:var(--coral); margin-bottom:6px;">Unit 12, Narrative writing</h3>
+    <p style="color:var(--text-mid); margin-bottom:0;">Characters, setting, and plot, planned with the Story Arc Planning Guide and its six beats: set the scene, introduce the problem, build the tension, face the moment, show what changed, close the story. Students work on showing rather than telling through dialogue, sensory detail, and action, then plan and draft a full narrative.</p>
+  </div>
+</section>
+
+<section class="band">
+  <div class="container" style="max-width:680px;">
+    <div class="accent-bar" style="margin-bottom:18px;"></div>
+    <h2 style="font-size:1.5rem; margin-bottom:16px;">Two planning tools arrive here</h2>
+    <p style="color:var(--text-mid);">The Essay Planning Guide is introduced in Unit 9, the bridge unit at the end of Framework, and carries through Units 10 and 11. The Story Arc Planning Guide arrives in Unit 12 for narrative writing. Both work the same way the earlier tools do: taught explicitly once, then used every time.</p>
   </div>
 </section>
 
@@ -172,8 +143,8 @@
   <div class="container">
     <div class="strip">
       <div>
-        <h3>These tools run through the whole program</h3>
-        <p>CAMPS and SPARK+SORT are two of the four tools taught across Structured Steps to Writing. If you are considering the full sequence, start with the tiers.</p>
+        <h3>Start where your student is now</h3>
+        <p>Composition is a while away. Foundations and Unit 5 are ready today, and they are what a student needs before this tier will make any sense.</p>
       </div>
       <a href="ssw.html" class="btn btn-coral btn-lg">See the tiers</a>
     </div>
