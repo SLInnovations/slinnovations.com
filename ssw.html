@@ -79,11 +79,31 @@
     .ssw-cta h2{ color:var(--white); font-size:2rem; margin-bottom:16px; }
     .ssw-cta p{ color:rgba(255,255,255,.8); max-width:480px; margin:0 auto 32px; }
 
+    /* video previews */
+    .preview-row{ display:flex; flex-wrap:wrap; gap:16px; justify-content:center; margin-top:48px; }
+    .preview-btn{ display:inline-flex; align-items:center; gap:12px; padding:14px 22px;
+      border:1px solid var(--blue-light); border-radius:var(--radius-lg); background:var(--white);
+      color:var(--blue); font-family:var(--font-head); font-weight:700; font-size:.92rem; text-decoration:none; }
+    .preview-btn .play{ display:inline-flex; align-items:center; justify-content:center; width:32px; height:32px;
+      border-radius:50%; background:var(--coral); flex:0 0 auto; }
+    .preview-note{ text-align:center; font-size:.85rem; color:var(--text-mid); margin-top:14px; }
+
+    /* credibility */
+    .cred-section{ background:var(--blue-dark); }
+    .cred-stat{ text-align:center; padding:32px 24px; }
+    .cred-stat .num{ font-family:var(--font-head); font-weight:800; font-size:3rem;
+      color:var(--yellow); line-height:1; margin-bottom:8px; }
+    .cred-stat .lbl{ color:rgba(255,255,255,.7); font-size:.9rem; line-height:1.6; }
+    .cred-divider{ width:1px; background:rgba(255,255,255,.1); align-self:stretch; }
+    .cred-stats-row{ display:grid; grid-template-columns:1fr 1px 1fr 1px 1fr; gap:0; margin-bottom:48px; }
+
     @media (max-width:900px){
       .hub-hero,.tier-cards,.go-block,.strip{ grid-template-columns:1fr; }
       .tools-grid{ grid-template-columns:1fr 1fr; }
       .band{ padding:64px 0; }
       .strip{ text-align:center; justify-items:center; }
+      .cred-stats-row{ grid-template-columns:1fr; }
+      .cred-divider{ display:none; }
     }
   </style>
 <!-- Google tag (gtag.js) -->
@@ -233,6 +253,48 @@
         <h4>CHECKLISTS</h4>
         <p>Opens and closes with confidence.</p>
       </div>
+    </div>
+
+    <div class="preview-row">
+      <a href="https://zoom.us/clips/share/zKEmHk2kRBmI0OeJkb6ozQ" target="_blank" rel="noopener" class="preview-btn">
+        <span class="play"><svg width="13" height="13" viewBox="0 0 12 12" aria-hidden="true"><path d="M2 1.5v9l8-4.5z" fill="#ffffff"/></svg></span>
+        Watch a lesson overview
+      </a>
+      <a href="https://zoom.us/clips/share/xe89Ery9RYyU5Ig3qpeuPg" target="_blank" rel="noopener" class="preview-btn">
+        <span class="play"><svg width="13" height="13" viewBox="0 0 12 12" aria-hidden="true"><path d="M2 1.5v9l8-4.5z" fill="#ffffff"/></svg></span>
+        Watch a lesson walkthrough
+      </a>
+      <a href="https://zoom.us/clips/share/43kr7tJFR2S4NUNIknjJsQ" target="_blank" rel="noopener" class="preview-btn">
+        <span class="play"><svg width="13" height="13" viewBox="0 0 12 12" aria-hidden="true"><path d="M2 1.5v9l8-4.5z" fill="#ffffff"/></svg></span>
+        See inside the student workbook
+      </a>
+    </div>
+    <p class="preview-note">Each preview is about a minute long.</p>
+  </div>
+</section>
+
+<!-- 4b. CREDIBILITY -->
+<section class="band cred-section">
+  <div class="container">
+    <div class="cred-stats-row">
+      <div class="cred-stat">
+        <div class="num">25+</div>
+        <div class="lbl">Years of combined experience in explicit, systematic literacy instruction</div>
+      </div>
+      <div class="cred-divider"></div>
+      <div class="cred-stat">
+        <div class="num">OG</div>
+        <div class="lbl">Orton-Gillingham certified practitioners who use these materials in real sessions every week</div>
+      </div>
+      <div class="cred-divider"></div>
+      <div class="cred-stat">
+        <div class="num">Built</div>
+        <div class="lbl">From real sessions with real students, not from theory alone. We know your students because they are our students.</div>
+      </div>
+    </div>
+    <div style="max-width:640px; margin:0 auto; text-align:center;">
+      <p style="color:rgba(255,255,255,0.75); font-size:1rem; line-height:1.75; margin-bottom:16px;">SSW started the way most good things do: out of necessity. After years of piecing together writing instruction for our own students, we built the resource we wished had existed. Everything in SSW has been used in real 1:1 and small group sessions before it was ever packaged for anyone else.</p>
+      <a href="about.html" style="color:var(--yellow); font-family:var(--font-head); font-weight:700; font-size:14px;">Learn more about us &rarr;</a>
     </div>
   </div>
 </section>
