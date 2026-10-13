@@ -56,7 +56,13 @@
     .resource-text h3 { font-size: 1.05rem; margin-bottom: 6px; color: var(--blue-dark); }
     .resource-text p { font-size: 0.9rem; margin-bottom: 0; color: var(--text-mid); line-height: 1.6; }
     .resource-item .btn { flex: 0 0 auto; white-space: nowrap; }
-  </style>
+      .account-doors { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-top: 20px; text-align: left; }
+    .account-door { background: var(--off-white); border-radius: var(--radius); padding: 20px; display: flex; flex-direction: column; }
+    .account-door h3 { font-size: 1.05rem; margin-bottom: 6px; }
+    .account-door p { font-size: 0.93rem; color: var(--text-mid); margin-bottom: 16px; flex: 1; }
+    .account-door .btn { align-self: flex-start; font-size: 15px; padding: 11px 20px; }
+    @media (max-width: 640px) { .account-doors { grid-template-columns: 1fr; } }
+</style>
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-MTDVGR5LZT"></script>
 <script>
@@ -124,8 +130,20 @@
 
   <div class="account-card">
     <h2>Access your purchases</h2>
-    <p>Click below to go to your account. You'll be able to view and download everything you've purchased from Spark Literacy Innovations Group.</p>
-    <a href="https://sparkliteracyinnovations.thrivecart.com/l/" class="btn btn-blue" target="_blank">Go to my account →</a>
+    <p>Where you log in depends on where you checked out. Not sure? Search your inbox for your receipt.</p>
+    <!-- PLATFORM SWITCH: emails link here, not to Payhip or ThriveCart directly. Update these two links only. -->
+    <div class="account-doors">
+      <div class="account-door">
+        <h3>Receipt from Payhip</h3>
+        <p>Log in with the email you used at checkout. First time? Choose <strong>Create Account</strong> using that same email and your purchases will be waiting.</p>
+        <a href="https://payhip.com/sparkliteracyinnovations/users/login" class="btn btn-blue" target="_blank" rel="noopener">Log in at Payhip →</a>
+      </div>
+      <div class="account-door">
+        <h3>Receipt from ThriveCart</h3>
+        <p>Bought from us before our move to Payhip? Your files are still right where you left them.</p>
+        <a href="https://sparkliteracyinnovations.thrivecart.com/l/" class="btn btn-outline" target="_blank" rel="noopener">Log in at ThriveCart →</a>
+      </div>
+    </div>
   </div>
 
   <div class="account-resources">
@@ -177,7 +195,7 @@
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2C6.48 2 2 6.48 2 12c0 4.24 2.65 7.86 6.39 9.29-.09-.78-.17-1.98.04-2.83.18-.77 1.22-5.17 1.22-5.17s-.31-.62-.31-1.54c0-1.45.84-2.53 1.88-2.53.89 0 1.32.67 1.32 1.47 0 .89-.57 2.23-.87 3.47-.25 1.04.52 1.88 1.54 1.88 1.85 0 3.27-1.95 3.27-4.76 0-2.49-1.79-4.23-4.34-4.23-2.96 0-4.69 2.22-4.69 4.51 0 .89.34 1.85.77 2.37.08.1.09.19.07.29-.08.32-.25 1.04-.28 1.18-.04.19-.14.23-.32.14-1.25-.58-2.03-2.42-2.03-3.89 0-3.15 2.29-6.05 6.61-6.05 3.47 0 6.16 2.47 6.16 5.77 0 3.45-2.17 6.22-5.19 6.22-1.01 0-1.97-.53-2.3-1.15l-.62 2.33c-.23.87-.84 1.96-1.25 2.62.94.29 1.94.45 2.97.45 5.52 0 10-4.48 10-10S17.52 2 12 2z"/></svg>
     </a>
   </div>
-  <div class="footer-copy" style="margin-bottom:6px;">Prices shown in US dollars (USD).</div>
+  <div class="footer-copy" style="margin-bottom:6px;">Prices shown in Canadian dollars (CAD).</div>
   <div class="footer-copy">© 2026 Spark Literacy Innovations Group. All rights reserved.</div>
 </footer>
 
