@@ -339,6 +339,26 @@ img { max-width: 100%; height: auto; display: block; }
 .footer-socials a:hover svg { fill: #ffffff; }
 /* --- END NAV + FOOTER FIX --- */
 
+    /* UNITS AT A GLANCE */
+    .glance { padding: 56px 0 24px; background: var(--white); scroll-margin-top: 140px; }
+    .glance h2 { text-align: center; font-size: 1.6rem; margin-bottom: 6px; }
+    .glance .glance-sub { text-align: center; color: var(--text-mid); margin: 0 auto 28px; max-width: 560px; }
+    .glance-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(170px, 1fr)); gap: 18px; max-width: 1080px; margin: 0 auto; padding: 0 24px; }
+    .glance-tile { background: var(--white); border-radius: var(--radius-lg); box-shadow: var(--shadow); overflow: hidden; display: flex; flex-direction: column; }
+    .glance-tile img { width: 100%; aspect-ratio: 1/1; object-fit: cover; display: block; }
+    .glance-body { padding: 12px 14px 14px; display: flex; flex-direction: column; flex: 1; }
+    .glance-num { font-family: var(--font-head); font-weight: 800; font-size: 11px; letter-spacing: .1em; text-transform: uppercase; color: var(--coral); }
+    .glance-title { font-family: var(--font-head); font-weight: 800; font-size: .98rem; line-height: 1.3; color: var(--blue-dark); margin: 4px 0 10px; flex: 1; }
+    .glance-price { font-family: var(--font-head); font-weight: 800; color: var(--blue-dark); margin-bottom: 10px; }
+    .glance-price small { font-size: 11px; color: var(--text-light); font-weight: 600; margin-left: 2px; }
+    .glance-actions { display: flex; gap: 6px; }
+    .glance-actions a { flex: 1; text-align: center; font-family: var(--font-head); font-weight: 700; font-size: 13px; padding: 8px 6px; border-radius: 8px; text-decoration: none; }
+    .glance-actions .g-det { border: 2px solid var(--blue-light); color: var(--blue); }
+    .glance-actions .g-det:hover { border-color: var(--blue); }
+    .glance-actions .g-buy { background: var(--coral); color: var(--white); }
+    .glance-actions .g-buy:hover { background: #d45847; }
+    [id^="unit-"] { scroll-margin-top: 140px; }
+    @media (max-width: 560px) { .glance-grid { grid-template-columns: 1fr 1fr; gap: 12px; padding: 0 16px; } .glance-title { font-size: .9rem; } }
 </style>
   <style>
     .units-hero {
@@ -613,6 +633,50 @@ img { max-width: 100%; height: auto; display: block; }
   </div>
 </div>
 
+<!-- UNITS AT A GLANCE -->
+<section class="glance" id="glance">
+  <h2>The units at a glance</h2>
+  <p class="glance-sub">Take them in order, one unit at a time, or save with the bundle above. Each unit is $49 CAD.</p>
+  <div class="glance-grid">
+    <div class="glance-tile">
+      <a href="#unit-1"><img src="tpt_unit1.png" alt="SSW Unit 1 cover: Building Basic Sentences" width="1080" height="1080" loading="lazy"></a>
+      <div class="glance-body">
+        <div class="glance-num" style="color:var(--blue);">Unit 1</div>
+        <div class="glance-title">Building Basic Sentences</div>
+        <div class="glance-price">$49<small>CAD</small></div>
+        <div class="glance-actions"><a href="#unit-1" class="g-det">Details ↓</a><a href="https://payhip.com/buy?link=VyhIA" class="g-buy">Buy $49</a></div>
+      </div>
+    </div>
+    <div class="glance-tile">
+      <a href="#unit-2"><img src="tpt_unit2.png" alt="SSW Unit 2 cover: Expanding Sentences" width="1080" height="1080" loading="lazy"></a>
+      <div class="glance-body">
+        <div class="glance-num" style="color:var(--blue);">Unit 2</div>
+        <div class="glance-title">Expanding Sentences</div>
+        <div class="glance-price">$49<small>CAD</small></div>
+        <div class="glance-actions"><a href="#unit-2" class="g-det">Details ↓</a><a href="https://payhip.com/buy?link=Kpg0z" class="g-buy">Buy $49</a></div>
+      </div>
+    </div>
+    <div class="glance-tile">
+      <a href="#unit-3"><img src="tpt_unit3.png" alt="SSW Unit 3 cover: Sentence Variety and Types" width="1080" height="1080" loading="lazy"></a>
+      <div class="glance-body">
+        <div class="glance-num" style="color:var(--blue);">Unit 3</div>
+        <div class="glance-title">Sentence Variety and Types</div>
+        <div class="glance-price">$49<small>CAD</small></div>
+        <div class="glance-actions"><a href="#unit-3" class="g-det">Details ↓</a><a href="https://payhip.com/buy?link=3acA8" class="g-buy">Buy $49</a></div>
+      </div>
+    </div>
+    <div class="glance-tile">
+      <a href="#unit-4"><img src="tpt_unit4.png" alt="SSW Unit 4 cover: Advanced Sentence Structure" width="1080" height="1080" loading="lazy"></a>
+      <div class="glance-body">
+        <div class="glance-num" style="color:var(--blue);">Unit 4</div>
+        <div class="glance-title">Advanced Sentence Structure</div>
+        <div class="glance-price">$49<small>CAD</small></div>
+        <div class="glance-actions"><a href="#unit-4" class="g-det">Details ↓</a><a href="https://payhip.com/buy?link=W4aIN" class="g-buy">Buy $49</a></div>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- UNITS -->
 <section class="section" style="background:var(--off-white);" id="units">
   <div class="container">
@@ -624,7 +688,7 @@ img { max-width: 100%; height: auto; display: block; }
     <div style="display:flex; flex-direction:column; gap:20px;" >
 
       <!-- UNIT 1 -->
-      <div class="unit-product-card">
+      <div class="unit-product-card" id="unit-1">
         <div class="unit-product-body">
           <div class="unit-heading-row">
             <span class="unit-num-badge">1</span>
@@ -650,7 +714,7 @@ img { max-width: 100%; height: auto; display: block; }
       </div>
 
       <!-- UNIT 2 -->
-      <div class="unit-product-card">
+      <div class="unit-product-card" id="unit-2">
         <div class="unit-product-body">
           <div class="unit-heading-row">
             <span class="unit-num-badge">2</span>
@@ -676,7 +740,7 @@ img { max-width: 100%; height: auto; display: block; }
       </div>
 
       <!-- UNIT 3 -->
-      <div class="unit-product-card">
+      <div class="unit-product-card" id="unit-3">
         <div class="unit-product-body">
           <div class="unit-heading-row">
             <span class="unit-num-badge">3</span>
@@ -702,7 +766,7 @@ img { max-width: 100%; height: auto; display: block; }
       </div>
 
       <!-- UNIT 4 -->
-      <div class="unit-product-card">
+      <div class="unit-product-card" id="unit-4">
         <div class="unit-product-body">
           <div class="unit-heading-row">
             <span class="unit-num-badge">4</span>
