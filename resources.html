@@ -4,11 +4,11 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" type="image/svg+xml" href="favicon.svg">
-  <title>Shop Resources: Spark Literacy Innovations Group</title>
+  <title>Shop: Spark Literacy Innovations Group</title>
   <meta name="description" content="Shop Structured Steps to Writing units and bundles, the Placement Screener, graphic organizers, writing games and anchor charts. Explicit, systematic resources for 1:1 and small group, plus a free Writing Starter Kit.">
   <link rel="canonical" href="https://slinnovations.com/resources.html">
   <meta property="og:type" content="website">
-  <meta property="og:title" content="Shop Resources: Spark Literacy Innovations Group">
+  <meta property="og:title" content="Shop: Spark Literacy Innovations Group">
   <meta property="og:description" content="Shop Structured Steps to Writing units and bundles, the Placement Screener, graphic organizers, writing games and anchor charts. Explicit, systematic resources for 1:1 and small group, plus a free Writing Starter Kit.">
   <meta property="og:url" content="https://slinnovations.com/resources.html">
   <meta property="og:image" content="https://slinnovations.com/img-books-stack.jpg">
@@ -19,6 +19,13 @@
     /* ============ STOREFRONT ============ */
     .store-wrap { padding: 48px 0 72px; background: var(--off-white); }
 
+    .ssw-band {
+      display: flex; align-items: center; justify-content: space-between; gap: 16px 24px; flex-wrap: wrap;
+      background: var(--white); border-left: 5px solid var(--coral); border-radius: var(--radius);
+      box-shadow: var(--shadow); padding: 18px 24px; margin-bottom: 32px;
+    }
+    .ssw-band strong { display: block; font-family: var(--font-head); color: var(--blue-dark); font-size: 1.05rem; }
+    .ssw-band span { color: var(--text-mid); font-size: 0.95rem; }
     .store-toolbar {
       display: flex; align-items: center; justify-content: space-between;
       gap: 16px; flex-wrap: wrap; margin-bottom: 28px;
@@ -238,7 +245,7 @@
     </a>
     <ul class="nav-links">
       <li><a href="index.html">Home</a></li>
-      <li><a href="ssw.html">SSW</a></li>
+      <li><a href="resources.html" class="active">Shop</a></li>
       <li><a href="workshops.html">Workshops</a></li>
       <li><a href="about.html">About</a></li>
       <li><a href="contact.html">Contact</a></li>
@@ -253,7 +260,7 @@
 </nav>
 <div class="nav-mobile-menu" id="mobileMenu">
   <a href="index.html">Home</a>
-  <a href="ssw.html">SSW</a>
+  <a href="resources.html">Shop</a>
   <a href="workshops.html">Workshops</a>
   <a href="about.html">About</a>
   <a href="contact.html">Contact</a>
@@ -286,7 +293,7 @@
   <div class="page-hero-bg" style="background-image:url('img-writing-child.jpg');"></div>
   <div class="page-hero-content">
     <div class="hero-eyebrow">Everything here was made in practice!</div>
-    <h1>Shop resources</h1>
+    <h1>Shop</h1>
     <p>Explicit, systematic writing resources, games and anchor charts for 1:1 and small group. Tested in real sessions.</p>
   </div>
 </div>
@@ -294,6 +301,14 @@
 <!-- STOREFRONT -->
 <section class="store-wrap" id="shop">
   <div class="container">
+
+    <div class="ssw-band">
+      <div>
+        <strong>New to Structured Steps to Writing?</strong>
+        <span>See how the program builds, from a first sentence to a planned essay, before you choose a unit.</span>
+      </div>
+      <a href="ssw.html" class="btn btn-blue btn-sm">How SSW works →</a>
+    </div>
 
     <div class="store-toolbar">
       <h2>All resources <span class="store-count" id="storeCount" aria-live="polite"></span></h2>
@@ -948,7 +963,8 @@
   <div class="footer-tagline"><a href="mailto:hello@slinnovations.com" style="color:rgba(255,255,255,0.55); text-decoration:none;">hello@slinnovations.com</a></div>
   <ul class="footer-links">
     <li><a href="index.html">Home</a></li>
-    <li><a href="resources.html">Resources</a></li>
+    <li><a href="resources.html">Shop</a></li>
+    <li><a href="ssw.html">SSW</a></li>
     <li><a href="workshops.html">Workshops</a></li>
     <li><a href="about.html">About</a></li>
     <li><a href="contact.html">Contact</a></li>
