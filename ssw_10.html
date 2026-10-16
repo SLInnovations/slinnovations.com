@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <title>Structured Steps to Writing: Spark Literacy Innovations Group</title>
+  <meta name="description" content="Structured Steps to Writing: an explicit, systematic writing program for 1:1 and small group, built by OG-certified practitioners. See how it works, from a first sentence to a planned essay.">
+  <link rel="canonical" href="https://slinnovations.com/ssw.html">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Structured Steps to Writing: Spark Literacy Innovations Group">
+  <meta property="og:description" content="Structured Steps to Writing: an explicit, systematic writing program built by OG-certified practitioners. See what makes it different.">
+  <meta property="og:url" content="https://slinnovations.com/ssw.html">
+  <meta property="og:image" content="https://slinnovations.com/img-books-stack.jpg">
+  <meta property="og:site_name" content="Spark Literacy Innovations Group">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* SSW HUB, page-level components.
+       These move into style.css when the full rebuild happens. */
+    :root{ --coral-dark:#d45847; --coral-pale:#fde8e5; --line:#e6ebee; --radius-xl:24px; }
+
+    .band{ padding:96px 0; }
+    .band-sm{ padding:56px 0; }
+    .bg-pale{ background:var(--off-white); }
+    .bg-cream{ background:var(--yellow-pale); }
+
+    .eyebrow{ font-family:var(--font-head); font-weight:800; font-size:12px;
+      letter-spacing:.14em; text-transform:uppercase; color:var(--coral); }
+
+    /* hero */
+    .hub-hero{ display:grid; grid-template-columns:1fr 1.05fr; gap:56px; align-items:center; }
+    .hub-hero h1{ font-size:clamp(2.1rem,4.2vw,3.1rem); letter-spacing:-.02em; margin:14px 0 0; }
+    .hub-hero h1 em{ font-style:normal; color:var(--coral); }
+    .hub-hero p.lede{ font-size:1.15rem; color:var(--text-mid); margin:18px 0 30px; max-width:34ch; }
+    .hub-actions{ display:flex; align-items:center; gap:20px; flex-wrap:wrap; }
+    .link-quiet{ font-family:var(--font-head); font-weight:700; font-size:15px;
+      color:var(--blue); text-decoration:underline; text-underline-offset:3px; }
+
+    /* tier cards */
+    .tier-cards{ display:grid; grid-template-columns:repeat(3,1fr); gap:28px; align-items:stretch; }
+    .tcard{ border:3px solid var(--blue); border-radius:var(--radius-xl); padding:26px;
+      background:var(--white); display:flex; flex-direction:column; text-align:center; }
+    .tcard-coral{ border-color:var(--coral); }
+    .tcard-quiet{ border-color:var(--line); background:var(--off-white); }
+    .tcard h3{ font-size:1.45rem; margin-bottom:4px; color:var(--blue); }
+    .tcard-coral h3{ color:var(--coral); }
+    .tcard-quiet h3{ color:var(--text-mid); }
+    .tcard .units{ font-family:var(--font-head); font-weight:700; font-size:13px;
+      color:var(--text-light); letter-spacing:.04em; margin-bottom:12px; }
+    .tcard p{ color:var(--text-mid); font-size:15.5px; margin-bottom:22px; }
+    .tcard .btn{ margin-top:auto; align-self:center; }
+    .tcard .label{ align-self:center; margin-bottom:14px; }
+    .label-quiet{ background:#e6ebee; color:var(--text-mid); }
+    .label-solid{ background:var(--yellow); color:var(--blue-dark); }
+
+
+    /* GO sets block */
+    .go-block{ display:grid; grid-template-columns:1fr 1.15fr; gap:44px; align-items:center; }
+    .go-list{ list-style:none; margin:18px 0 26px; }
+    .go-list li{ font-size:15.5px; color:var(--text-mid); padding:7px 0 7px 24px; position:relative; }
+    .go-list li::before{ content:'\2713'; color:var(--coral); font-weight:700; position:absolute; left:0; }
+
+    /* four tools */
+    .tools-grid{ display:grid; grid-template-columns:repeat(4,1fr); gap:24px; }
+    .tool{ text-align:center; }
+    .tool img{ width:100%; aspect-ratio:4/3; object-fit:contain; margin-bottom:14px; }
+    .tool h4{ font-size:1rem; color:var(--blue); letter-spacing:.02em; }
+    .tool p{ font-size:14.5px; color:var(--text-mid); margin-top:4px; }
+
+    /* CTA strip */
+    .strip{ background:var(--blue-dark); border-radius:var(--radius-xl); padding:40px 44px;
+      display:grid; grid-template-columns:1fr auto; gap:32px; align-items:center; }
+    .strip h3{ color:var(--white); font-size:1.4rem; margin-bottom:8px; }
+    .strip p{ color:rgba(255,255,255,.78); font-size:16px; max-width:48ch; }
+
+    /* final optin */
+    .ssw-cta{ background:var(--coral); padding:72px 0; text-align:center; }
+    .ssw-cta h2{ color:var(--white); font-size:2rem; margin-bottom:16px; }
+    .ssw-cta p{ color:rgba(255,255,255,.8); max-width:480px; margin:0 auto 32px; }
+
+    /* video previews */
+    .preview-row{ display:flex; flex-wrap:wrap; gap:16px; justify-content:center; margin-top:48px; }
+    .preview-btn{ display:inline-flex; align-items:center; gap:12px; padding:14px 22px;
+      border:1px solid var(--blue-light); border-radius:var(--radius-lg); background:var(--white);
+      color:var(--blue); font-family:var(--font-head); font-weight:700; font-size:.92rem; text-decoration:none; }
+    .preview-btn .play{ display:inline-flex; align-items:center; justify-content:center; width:32px; height:32px;
+      border-radius:50%; background:var(--coral); flex:0 0 auto; }
+    .preview-note{ text-align:center; font-size:.85rem; color:var(--text-mid); margin-top:14px; }
+    .free-lesson{ max-width:820px; margin:40px auto 0; background:var(--yellow-pale); border:1px solid var(--yellow);
+      border-radius:var(--radius-lg); padding:26px 30px; display:flex; align-items:center; justify-content:space-between; gap:20px; flex-wrap:wrap; }
+    .free-lesson .fl-text{ flex:1 1 320px; }
+    .free-lesson .btn{ flex:0 0 auto; }
+    .free-lesson .fl-text h3{ font-size:1.2rem; margin:0 0 4px; color:var(--blue-dark); }
+    .free-lesson .fl-text p{ margin:0; color:var(--text-mid); font-size:.95rem; }
+    @media (max-width:600px){
+      .free-lesson{ flex-direction:column; text-align:center; }
+      .free-lesson .fl-text{ flex:none; }
+    }
+
+    /* credibility */
+    .cred-section{ background:var(--blue-dark); }
+    .cred-stat{ text-align:center; padding:32px 24px; }
+    .cred-stat .num{ font-family:var(--font-head); font-weight:800; font-size:3rem;
+      color:var(--yellow); line-height:1; margin-bottom:8px; }
+    .cred-stat .lbl{ color:rgba(255,255,255,.7); font-size:.9rem; line-height:1.6; }
+    .cred-divider{ width:1px; background:rgba(255,255,255,.1); align-self:stretch; }
+    .cred-stats-row{ display:grid; grid-template-columns:1fr 1px 1fr 1px 1fr; gap:0; margin-bottom:48px; }
+
+    @media (max-width:900px){
+      .hub-hero,.tier-cards,.go-block,.strip{ grid-template-columns:1fr; }
+      .tools-grid{ grid-template-columns:1fr 1fr; }
+      .band{ padding:64px 0; }
+      .strip{ text-align:center; justify-items:center; }
+      .cred-stats-row{ grid-template-columns:1fr; }
+      .cred-divider{ display:none; }
+    }
+
+    /* --- intro page additions --- */
+    .why { max-width: 720px; margin: 0 auto; }
+    .why p { color: var(--text-mid); font-size: 1.08rem; line-height: 1.8; margin-bottom: 18px; }
+    .why .big-q { font-family: var(--font-head); font-weight: 800; font-size: clamp(1.6rem, 3vw, 2.1rem); color: var(--blue-dark); line-height: 1.25; margin-bottom: 22px; }
+    .why .big-q em { font-style: normal; color: var(--coral); }
+    .video-feature { display: block; position: relative; max-width: 820px; margin: 0 auto; border-radius: var(--radius-xl); overflow: hidden;
+      aspect-ratio: 16/9; background: var(--blue-dark) url('ssw-hero.png') center/cover; box-shadow: var(--shadow-md); text-decoration: none; }
+    .video-feature::before { content: ''; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(45,74,82,.15), rgba(45,74,82,.85)); }
+    .video-feature .vf-play { position: absolute; top: 50%; left: 50%; transform: translate(-50%,-60%); width: 84px; height: 84px; border-radius: 50%;
+      background: var(--coral); display: flex; align-items: center; justify-content: center; box-shadow: 0 8px 24px rgba(0,0,0,.3); transition: transform .2s; }
+    .video-feature:hover .vf-play { transform: translate(-50%,-60%) scale(1.07); }
+    .video-feature .vf-text { position: absolute; left: 0; right: 0; bottom: 22px; text-align: center; color: var(--white); padding: 0 20px; }
+    .video-feature .vf-text strong { display: block; font-family: var(--font-head); font-size: 1.3rem; }
+    .video-feature .vf-text span { font-size: .92rem; opacity: .85; }
+    @media (max-width:600px){
+      .video-feature .vf-play { width: 56px; height: 56px; transform: translate(-50%,-90%); }
+      .video-feature:hover .vf-play { transform: translate(-50%,-90%) scale(1.07); }
+      .video-feature .vf-text { bottom: 12px; }
+      .video-feature .vf-text strong { font-size: 1.02rem; }
+      .video-feature .vf-text span { font-size: .8rem; }
+    }
+    .journey { display: grid; grid-template-columns: 1fr 40px 1fr 40px 1fr; align-items: stretch; }
+    .journey .arrow { display: flex; align-items: center; justify-content: center; color: var(--coral); font-size: 1.6rem; font-weight: 800; }
+    .tcard .step { font-family: var(--font-head); font-weight: 800; font-size: 12px; letter-spacing: .12em; text-transform: uppercase; color: var(--text-light); margin-bottom: 6px; }
+    .tcard .tc-actions { margin-top: auto; display: flex; flex-direction: column; gap: 10px; align-items: center; }
+    .tcard .tc-actions .btn { margin-top: 0; }
+    .inside-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }
+    .inside-item { background: var(--white); border-radius: var(--radius-lg); padding: 24px; box-shadow: var(--shadow); }
+    .inside-item h4 { font-size: 1.02rem; color: var(--blue-dark); margin-bottom: 8px; }
+    .inside-item p { font-size: .94rem; color: var(--text-mid); line-height: 1.6; }
+    .start-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; }
+    .start-card { border-radius: var(--radius-lg); padding: 30px 26px; display: flex; flex-direction: column; background: var(--white); border: 2px solid var(--blue-light); }
+    .start-card.feature { background: var(--blue-dark); border-color: var(--blue-dark); }
+    .start-card h3 { font-size: 1.2rem; margin-bottom: 10px; }
+    .start-card p { color: var(--text-mid); font-size: .97rem; margin-bottom: 22px; flex: 1; }
+    .start-card.feature h3 { color: var(--white); }
+    .start-card.feature p { color: rgba(255,255,255,.8); }
+    .start-card .btn { align-self: flex-start; }
+    @media (max-width: 900px) {
+      .journey { grid-template-columns: 1fr; gap: 0; }
+      .journey .arrow { transform: rotate(90deg); padding: 6px 0; }
+      .inside-grid { grid-template-columns: 1fr 1fr; }
+      .start-grid { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 520px) { .inside-grid { grid-template-columns: 1fr; } }
+  </style>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-MTDVGR5LZT"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-MTDVGR5LZT');
+</script>
+</head>
+<body>
+<div id="launch-banner" style="background:var(--blue-dark); color:var(--white); padding:10px 24px; text-align:center; font-family:var(--font-head); font-size:14px; font-weight:700; position:relative; z-index:200;"><span style="color:var(--yellow);">Units 1 through 9 are available now.</span>&nbsp;&nbsp;<span style="color:rgba(255,255,255,0.85); font-weight:400;">Foundations and Framework are complete.</span>&nbsp;&nbsp;<a href="#tiers" style="color:var(--yellow); text-decoration:underline; font-size:13px;">See the tiers</a></div>
+
+<!-- NAV -->
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo">
+      <img src="logo.png" alt="Spark Literacy Innovations Group">
+    </a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="resources.html">Shop</a></li>
+      <li><a href="workshops.html">Workshops</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="blog.html">Blog</a></li>
+      <li><a href="account.html">My Account</a></li>
+      <li><a href="resources.html#optin" class="nav-cta">Free starter kit</a></li>
+    </ul>
+      <button class="nav-hamburger" id="hamburger" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </button>
+</div>
+</nav>
+<div class="nav-mobile-menu" id="mobileMenu">
+  <a href="index.html">Home</a>
+  <a href="resources.html">Shop</a>
+  <a href="workshops.html">Workshops</a>
+  <a href="about.html">About</a>
+  <a href="contact.html">Contact</a>
+  <a href="blog.html">Blog</a>
+  <a href="account.html">My Account</a>
+  <a href="resources.html#optin" class="nav-cta">Free starter kit</a>
+</div>
+<script>
+(function(){
+  var btn = document.getElementById('hamburger');
+  var menu = document.getElementById('mobileMenu');
+  if(!btn || !menu) return;
+  btn.addEventListener('click', function(){
+    btn.classList.toggle('open');
+    menu.classList.toggle('open');
+    document.body.style.overflow = menu.classList.contains('open') ? 'hidden' : '';
+  });
+  menu.querySelectorAll('a').forEach(function(a){
+    a.addEventListener('click', function(){
+      btn.classList.remove('open');
+      menu.classList.remove('open');
+      document.body.style.overflow = '';
+    });
+  });
+})();
+</script>
+
+<!-- 1. HERO -->
+<section class="band">
+  <div class="container hub-hero">
+    <div>
+      <div class="eyebrow">Structured Steps to Writing</div>
+      <h1>Writing instruction taught the way you teach <em>reading</em>.</h1>
+      <p class="lede">Explicit, systematic writing instruction for 1:1 and small group. 15 minutes a lesson. Everything scripted.</p>
+      <div class="hub-actions">
+        <a href="resources.html#shop" class="btn btn-coral btn-lg">Browse the shop</a>
+        <a href="screener.html" class="link-quiet">Not sure where to start? Take the screener</a>
+      </div>
+    </div>
+    <div>
+      <img src="ssw-hero.png" alt="Structured Steps to Writing Unit 1 shown on a monitor, laptop and tablet with lesson pages behind" style="border-radius:var(--radius-lg);">
+    </div>
+  </div>
+</section>
+
+<!-- 2. WHY -->
+<section class="band bg-pale">
+  <div class="container why">
+    <div class="accent-bar"></div>
+    <p class="big-q">"What do you use for <em>writing</em>?"</p>
+    <p>It's the question we hear more than any other. And for a long time, we didn't have a good answer either.</p>
+    <p>Reading has a roadmap. Sounds, syllables, morphology, each one taught explicitly, one step at a time. Writing often gets a prompt and a blank page. So we spent years piecing things together for our own students.</p>
+    <p>Structured Steps to Writing is the roadmap we wished we'd had. Every skill is taught directly, practiced right away, and built on in the next lesson. It all starts with one sentence.</p>
+  </div>
+</section>
+
+<!-- 3. VIDEO: SSW introduction (feature) + 1-minute lesson previews + free sample lesson -->
+<section class="band" id="video">
+  <div class="container">
+    <div style="text-align:center; margin-bottom:36px;">
+      <div class="accent-bar" style="margin:0 auto 16px;"></div>
+      <h2 style="font-size:2rem; margin-bottom:10px;">See it in action</h2>
+      <p style="color:var(--text-mid); max-width:52ch; margin:0 auto;">Start with a 2-minute introduction. Then see real lessons, about a minute each.</p>
+    </div>
+    <a class="video-feature" href="https://zoom.us/clips/share/xhQT3i52SCesQEW994bmGA" target="_blank" rel="noopener">
+      <span class="vf-play"><svg width="30" height="30" viewBox="0 0 12 12" aria-hidden="true"><path d="M2.5 1.5v9l8-4.5z" fill="#ffffff"/></svg></span>
+      <span class="vf-text"><strong>Meet Structured Steps to Writing</strong><span>About 2 minutes · opens in Zoom Clips</span></span>
+    </a>
+    <div class="preview-row">
+      <a href="https://zoom.us/clips/share/zKEmHk2kRBmI0OeJkb6ozQ" target="_blank" rel="noopener" class="preview-btn"><span class="play"><svg width="13" height="13" viewBox="0 0 12 12" aria-hidden="true"><path d="M2 1.5v9l8-4.5z" fill="#ffffff"/></svg></span>
+        Watch a lesson overview
+      </a>
+      <a href="https://zoom.us/clips/share/xe89Ery9RYyU5Ig3qpeuPg" target="_blank" rel="noopener" class="preview-btn"><span class="play"><svg width="13" height="13" viewBox="0 0 12 12" aria-hidden="true"><path d="M2 1.5v9l8-4.5z" fill="#ffffff"/></svg></span>
+        Watch a lesson walkthrough
+      </a>
+      <a href="https://zoom.us/clips/share/43kr7tJFR2S4NUNIknjJsQ" target="_blank" rel="noopener" class="preview-btn"><span class="play"><svg width="13" height="13" viewBox="0 0 12 12" aria-hidden="true"><path d="M2 1.5v9l8-4.5z" fill="#ffffff"/></svg></span>
+        See inside the student workbook
+      </a>
+    </div>
+    <div class="free-lesson">
+      <div class="fl-text">
+        <h3>Try a full lesson with your student</h3>
+        <p>Unit 1, Lesson 2: Nouns. The script, the workbook pages and the practice, free.</p>
+      </div>
+      <a href="https://payhip.com/b/yrO16" target="_blank" rel="noopener" class="btn btn-coral">Get the free lesson</a>
+    </div>
+  </div>
+</section>
+
+<!-- 4. HOW IT BUILDS -->
+<section class="band bg-pale" id="tiers">
+  <div class="container">
+    <div style="text-align:center; margin-bottom:52px;">
+      <div class="accent-bar" style="margin:0 auto 16px;"></div>
+      <h2 style="font-size:2rem; margin-bottom:10px;">Sentence. Paragraph. Essay.</h2>
+      <p style="color:var(--text-mid); max-width:56ch; margin:0 auto;">Twelve units in three tiers, one journey. Students start where they are and move forward when they're ready.</p>
+    </div>
+
+    <div class="journey">
+      <div class="tcard">
+        <img src="tier-foundations.png" alt="The four Foundations instructor manuals, Units 1 to 4, fanned out" style="border-radius:var(--radius-lg);">
+        <div class="step">Step 1</div>
+        <h3>Foundations</h3>
+        <div class="units">Units 1 to 4 · available now</div>
+        <p>Building sentences. From capital letters and end punctuation to combining and expanding ideas.</p>
+        <div class="tc-actions">
+          <a href="resources.html?tier=foundations#shop" class="btn btn-blue">Shop Foundations</a>
+          <a href="units.html#glance" class="link-quiet">See the 4 units</a>
+        </div>
+      </div>
+      <div class="arrow" aria-hidden="true">→</div>
+      <div class="tcard tcard-coral">
+        <img src="tier-framework.png" alt="Framework tier materials: Unit 5 lesson plan, student workbook page and baseline assessment" style="border-radius:var(--radius-lg);">
+        <div class="step">Step 2</div>
+        <h3>Framework</h3>
+        <div class="units">Units 5 to 9 · available now</div>
+        <p>Paragraph writing. From a single paragraph to a planned essay.</p>
+        <div class="tc-actions">
+          <a href="resources.html?tier=framework#shop" class="btn btn-coral">Shop Framework</a>
+          <a href="framework.html#glance" class="link-quiet">See the 5 units</a>
+        </div>
+      </div>
+      <div class="arrow" aria-hidden="true">→</div>
+      <div class="tcard tcard-quiet">
+        <div style="background:var(--off-white); border:1px solid var(--line); border-radius:var(--radius-lg); aspect-ratio:4/3; display:flex; align-items:center; justify-content:center; margin-bottom:22px;">
+          <span style="font-family:var(--font-head); font-weight:800; font-size:1.1rem; color:var(--text-light); letter-spacing:.04em;">In development</span>
+        </div>
+        <div class="step">Step 3</div>
+        <h3>Composition</h3>
+        <div class="units">Units 10 to 12 · coming next</div>
+        <p>Full essays across genres. Where the whole sequence has been heading since the first sentence.</p>
+        <div class="tc-actions">
+          <a href="composition.html" class="btn btn-outline">What's coming</a>
+        </div>
+      </div>
+    </div>
+
+    <div style="text-align:center; margin-top:44px;">
+      <a href="https://pub-66d92064f29142d99673c2f101db9e0b.r2.dev/ssw/unit_5/SSW_Scope_Sequence.pdf" target="_blank" rel="noopener" class="link-quiet">See all twelve units, lesson by lesson</a>
+    </div>
+  </div>
+</section>
+
+<!-- 5. EVERY UNIT INCLUDES -->
+<section class="band">
+  <div class="container">
+    <div style="text-align:center; margin-bottom:40px;">
+      <div class="accent-bar" style="margin:0 auto 16px;"></div>
+      <h2 style="font-size:2rem; margin-bottom:10px;">Open it and teach</h2>
+      <p style="color:var(--text-mid); max-width:52ch; margin:0 auto;">Every unit comes with the same complete package. 15-minute lessons, built for 1:1 and small group.</p>
+    </div>
+    <div class="inside-grid">
+      <div class="inside-item"><h4>Instructor manual</h4><p>Fully scripted lessons with SAY, DO, and ASK for every step. No planning required.</p></div>
+      <div class="inside-item"><h4>Student workbook</h4><p>Worked examples and fresh practice for every lesson, print-ready and photocopiable.</p></div>
+      <div class="inside-item"><h4>Multisensory resource package</h4><p>Sort cards, word cards, and sentence strips for students who learn by moving and touching.</p></div>
+      <div class="inside-item"><h4>Assessment package</h4><p>A baseline and a final for every unit, with scoring guides and growth analysis.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- 4. FOUR TOOLS -->
+<section class="band">
+  <div class="container">
+    <div style="text-align:center; margin-bottom:48px;">
+      <div class="accent-bar" style="margin:0 auto 16px;"></div>
+      <h2 style="font-size:2rem; margin-bottom:10px;">Four tools, introduced across twelve units</h2>
+      <p style="color:var(--text-mid); max-width:52ch; margin:0 auto;">Each tool is taught explicitly when a student is ready for it, then carries forward through every unit that follows.</p>
+    </div>
+    <div class="tools-grid">
+      <div class="tool">
+        <img src="tool-spark-sort.png" alt="The SPARK and SORT brainstorming organizer">
+        <h4>SPARK + SORT</h4>
+        <p>Beats the blank page.</p>
+      </div>
+      <div class="tool">
+        <img src="tool-stems.png" alt="The STEMS paragraph framework: state your topic, target your idea, explain with an example, make it matter, sum it up">
+        <h4>STEMS</h4>
+        <p>Builds every paragraph.</p>
+      </div>
+      <div class="tool">
+        <img src="tool-camps.png" alt="The CAMPS editing organizer and anchor chart">
+        <h4>CAMPS</h4>
+        <p>Catches every error, in order.</p>
+      </div>
+      <div class="tool">
+        <img src="tool-checklists.png" alt="The Introduction and Conclusion checklists">
+        <h4>CHECKLISTS</h4>
+        <p>Opens and closes with confidence.</p>
+      </div>
+    </div>
+
+    <p class="preview-note" style="margin-top:40px; font-size:.95rem;">The CAMPS and SPARK+SORT organizers are also sold on their own. <a href="resources.html?cat=organizers#shop" style="color:var(--coral); font-weight:700;">See them in the shop</a></p>
+  </div>
+</section>
+
+<!-- 4b. CREDIBILITY -->
+<section class="band cred-section">
+  <div class="container">
+    <div class="cred-stats-row">
+      <div class="cred-stat">
+        <div class="num">25+</div>
+        <div class="lbl">Years of combined experience in explicit, systematic literacy instruction</div>
+      </div>
+      <div class="cred-divider"></div>
+      <div class="cred-stat">
+        <div class="num">OG</div>
+        <div class="lbl">Orton-Gillingham certified practitioners who use these materials in real sessions every week</div>
+      </div>
+      <div class="cred-divider"></div>
+      <div class="cred-stat">
+        <div class="num">Built</div>
+        <div class="lbl">From real sessions with real students, not from theory alone. We know your students because they are our students.</div>
+      </div>
+    </div>
+    <div style="max-width:640px; margin:0 auto; text-align:center;">
+      <p style="color:rgba(255,255,255,0.75); font-size:1rem; line-height:1.75; margin-bottom:16px;">SSW started the way most good things do: out of necessity. After years of piecing together writing instruction for our own students, we built the resource we wished had existed. Everything in SSW has been used in real 1:1 and small group sessions before it was ever packaged for anyone else.</p>
+      <a href="about.html" style="color:var(--yellow); font-family:var(--font-head); font-weight:700; font-size:14px;">Learn more about us &rarr;</a>
+    </div>
+  </div>
+</section>
+
+<!-- 6. WHERE TO START -->
+<section class="band bg-pale">
+  <div class="container">
+    <div style="text-align:center; margin-bottom:40px;">
+      <div class="accent-bar" style="margin:0 auto 16px;"></div>
+      <h2 style="font-size:2rem;">Where to start</h2>
+    </div>
+    <div class="start-grid">
+      <div class="start-card">
+        <h3>Not sure where your student is?</h3>
+        <p>The Placement Screener takes about 20 minutes, scores automatically, and tells you which unit to begin with.</p>
+        <a href="screener.html" class="btn btn-blue">See the screener ($36)</a>
+      </div>
+      <div class="start-card feature">
+        <h3>Ready to begin?</h3>
+        <p>Every unit, bundle, and organizer set is in the shop, with what's inside each one.</p>
+        <a href="resources.html#shop" class="btn btn-coral">Browse the shop</a>
+      </div>
+      <div class="start-card">
+        <h3>Want to look around first?</h3>
+        <p>Our free Writing Starter Kit has a guide to why writing is hard and a mini screener.</p>
+        <a href="#ssw-optin" class="btn btn-outline">Get the free kit</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 6. FREE STARTER KIT -->
+<!-- FINAL CTA + OPTIN -->
+<section class="ssw-cta" id="ssw-optin">
+  <div class="container">
+    <h2>Get your free Writing Starter Kit</h2>
+    <p>Join the list and get your free Writing Starter Kit: a writing guide and mini-screener to help you figure out exactly where your student needs support.</p>
+    <div style="max-width:420px; margin:0 auto;">
+      <!-- MAILERLITE FORM (compact) -->
+      <style>
+      #mlb2-38673395b.ml-form-embedContainer{box-sizing:border-box;display:table;margin:0 auto;position:static;width:100%!important}
+      #mlb2-38673395b .ml-form-embedWrapper{background:#ffffff;border-radius:12px;display:inline-block!important;width:100%;padding:0}
+      #mlb2-38673395b .ml-form-embedBody{padding:28px}
+      #mlb2-38673395b .ml-form-embedContent h4{color:#3b6f8d;font-family:'Nunito',sans-serif;font-size:1.15rem;font-weight:800;margin:0 0 6px;text-align:center}
+      #mlb2-38673395b .ml-form-embedContent p{color:#555;font-size:13px;text-align:center;margin-bottom:16px}
+      #mlb2-38673395b .ml-form-fieldRow{margin:0 0 10px;width:100%}
+      #mlb2-38673395b .ml-form-fieldRow input{background:#fff!important;color:#333!important;border:1px solid #ddd;border-radius:8px!important;font-size:14px!important;padding:11px 14px!important;width:100%!important;box-sizing:border-box!important}
+      #mlb2-38673395b .ml-form-embedSubmit{float:left;width:100%;margin:0 0 8px}
+      #mlb2-38673395b .ml-form-embedSubmit button{background:#f3d25b!important;border:none!important;border-radius:8px!important;color:#2d4a52!important;cursor:pointer;font-family:'Nunito',sans-serif!important;font-size:14px!important;font-weight:700!important;padding:12px!important;width:100%!important}
+      #mlb2-38673395b .ml-form-embedSubmit button:hover{background:#e6c340!important}
+      #mlb2-38673395b .row-success{padding:28px}
+      #mlb2-38673395b .row-success h4{color:#3b6f8d;font-family:'Nunito',sans-serif;font-size:1.1rem;font-weight:800;text-align:center}
+      #mlb2-38673395b .row-success p{color:#555;font-size:13px;text-align:center}
+      .ml-ssw-load{display:inline-block;width:20px;height:20px}
+      .ml-ssw-load:after{content:" ";display:block;width:11px;height:11px;margin:1px;border-radius:50%;border:4px solid #fff;border-color:#fff #fff #fff transparent;animation:ssw-spin 1.2s linear infinite}
+      @keyframes ssw-spin{0%{transform:rotate(0deg)}100%{transform:rotate(360deg)}}
+      </style>
+      <div id="mlb2-38673395b" class="ml-form-embedContainer ml-subscribe-form ml-subscribe-form-38673395">
+        <div class="ml-form-align-center">
+          <div class="ml-form-embedWrapper">
+            <div class="ml-form-embedBody row-form">
+              <div class="ml-form-embedContent">
+                <h4>Get your free Writing Starter Kit</h4>
+                <p>A writing guide and mini-screener, free.</p>
+              </div>
+              <form action="https://assets.mailerlite.com/jsonp/2186367/forms/182320185841026880/subscribe" method="post" target="_blank">
+                <div class="ml-form-formContent">
+                  <div class="ml-form-fieldRow">
+                    <input type="text" name="fields[name]" placeholder="Your name" autocomplete="given-name">
+                  </div>
+                  <div class="ml-form-fieldRow">
+                    <input type="email" name="fields[email]" placeholder="Your email" required autocomplete="email">
+                  </div>
+                </div>
+                <input type="hidden" name="ml-submit" value="1">
+                <div class="ml-form-embedSubmit">
+                  <button type="submit">Get your free Starter Kit →</button>
+                  <button disabled style="display:none" type="button"><div class="ml-ssw-load"></div></button>
+                </div>
+                <input type="hidden" name="anticsrf" value="true">
+              </form>
+            </div>
+            <div class="row-success" style="display:none">
+              <h4>You're on the list!</h4>
+              <p><em>Check your inbox for your free resources.</em></p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <p style="color:rgba(255,255,255,0.4); font-size:12px; margin-top:10px;">No spam. Just useful resources.</p>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <img src="SLI-logo.svg" alt="Spark Literacy Innovations Group" style="height:72px; width:auto; margin:0 auto 16px; display:block; mix-blend-mode:lighten; filter:brightness(1.1);">
+  <div class="footer-tagline"><a href="mailto:hello@slinnovations.com" style="color:rgba(255,255,255,0.55); text-decoration:none;">hello@slinnovations.com</a></div>
+  <ul class="footer-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="resources.html">Shop</a></li>
+    <li><a href="ssw.html">SSW</a></li>
+    <li><a href="workshops.html">Workshops</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+  <hr class="footer-divider">
+  <ul class="footer-links" style="margin-bottom:16px;">
+    <li><a href="privacy.html">Privacy Policy</a></li>
+    <li><a href="terms.html">Terms &amp; Conditions</a></li>
+    <li><a href="refund.html">Refund Policy</a></li>
+    <li><a href="license.html">Licence Terms of Use</a></li>
+  </ul>
+  <div class="footer-socials">
+    <a href="https://www.facebook.com/sparkliteracyinnovations" target="_blank" rel="noopener" aria-label="Follow Spark Literacy Innovations on Facebook">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+    </a>
+    <a href="https://www.instagram.com/spark_literacy_innovations" target="_blank" rel="noopener" aria-label="Follow Spark Literacy Innovations on Instagram">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5" ry="5" style="fill:none;stroke:rgba(255,255,255,0.75);stroke-width:1.5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" style="fill:none;stroke:rgba(255,255,255,0.75);stroke-width:1.5"/><circle cx="17.5" cy="6.5" r="1.5" style="fill:rgba(255,255,255,0.75)"/></svg>
+    </a>
+    <a href="https://ca.pinterest.com/sparkliteracyinnovations/" target="_blank" rel="noopener" aria-label="Follow Spark Literacy Innovations on Pinterest">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2C6.48 2 2 6.48 2 12c0 4.24 2.65 7.86 6.39 9.29-.09-.78-.17-1.98.04-2.83.18-.77 1.22-5.17 1.22-5.17s-.31-.62-.31-1.54c0-1.45.84-2.53 1.88-2.53.89 0 1.32.67 1.32 1.47 0 .89-.57 2.23-.87 3.47-.25 1.04.52 1.88 1.54 1.88 1.85 0 3.27-1.95 3.27-4.76 0-2.49-1.79-4.23-4.34-4.23-2.96 0-4.69 2.22-4.69 4.51 0 .89.34 1.85.77 2.37.08.1.09.19.07.29-.08.32-.25 1.04-.28 1.18-.04.19-.14.23-.32.14-1.25-.58-2.03-2.42-2.03-3.89 0-3.15 2.29-6.05 6.61-6.05 3.47 0 6.16 2.47 6.16 5.77 0 3.45-2.17 6.22-5.19 6.22-1.01 0-1.97-.53-2.3-1.15l-.62 2.33c-.23.87-.84 1.96-1.25 2.62.94.29 1.94.45 2.97.45 5.52 0 10-4.48 10-10S17.52 2 12 2z"/></svg>
+    </a>
+  </div>
+  <div class="footer-copy" style="margin-bottom:6px;">Prices shown in Canadian dollars (CAD), plus applicable taxes.</div>
+  <div class="footer-copy">© 2026 Spark Literacy Innovations Group. All rights reserved.</div>
+</footer>
+
+</body>
+</html>
