@@ -87,6 +87,16 @@
     .preview-btn .play{ display:inline-flex; align-items:center; justify-content:center; width:32px; height:32px;
       border-radius:50%; background:var(--coral); flex:0 0 auto; }
     .preview-note{ text-align:center; font-size:.85rem; color:var(--text-mid); margin-top:14px; }
+    .free-lesson{ max-width:820px; margin:40px auto 0; background:var(--yellow-pale); border:1px solid var(--yellow);
+      border-radius:var(--radius-lg); padding:26px 30px; display:flex; align-items:center; justify-content:space-between; gap:20px; flex-wrap:wrap; }
+    .free-lesson .fl-text{ flex:1 1 320px; }
+    .free-lesson .btn{ flex:0 0 auto; }
+    .free-lesson .fl-text h3{ font-size:1.2rem; margin:0 0 4px; color:var(--blue-dark); }
+    .free-lesson .fl-text p{ margin:0; color:var(--text-mid); font-size:.95rem; }
+    @media (max-width:600px){
+      .free-lesson{ flex-direction:column; text-align:center; }
+      .free-lesson .fl-text{ flex:none; }
+    }
 
     /* credibility */
     .cred-section{ background:var(--blue-dark); }
@@ -120,6 +130,13 @@
     .video-feature .vf-text { position: absolute; left: 0; right: 0; bottom: 22px; text-align: center; color: var(--white); padding: 0 20px; }
     .video-feature .vf-text strong { display: block; font-family: var(--font-head); font-size: 1.3rem; }
     .video-feature .vf-text span { font-size: .92rem; opacity: .85; }
+    @media (max-width:600px){
+      .video-feature .vf-play { width: 56px; height: 56px; transform: translate(-50%,-90%); }
+      .video-feature:hover .vf-play { transform: translate(-50%,-90%) scale(1.07); }
+      .video-feature .vf-text { bottom: 12px; }
+      .video-feature .vf-text strong { font-size: 1.02rem; }
+      .video-feature .vf-text span { font-size: .8rem; }
+    }
     .journey { display: grid; grid-template-columns: 1fr 40px 1fr 40px 1fr; align-items: stretch; }
     .journey .arrow { display: flex; align-items: center; justify-content: center; color: var(--coral); font-size: 1.6rem; font-weight: 800; }
     .tcard .step { font-family: var(--font-head); font-weight: 800; font-size: 12px; letter-spacing: .12em; text-transform: uppercase; color: var(--text-light); margin-bottom: 6px; }
@@ -237,27 +254,35 @@
   </div>
 </section>
 
-<!-- 3. VIDEO
-     INTRO VIDEO: when the SSW introduction Zoom Clip is ready, replace the href below with its share link,
-     and change the two lines of text (e.g. "Meet Structured Steps to Writing" / "A 3-minute introduction"). -->
-<section class="band">
+<!-- 3. VIDEO: SSW introduction (feature) + 1-minute lesson previews + free sample lesson -->
+<section class="band" id="video">
   <div class="container">
     <div style="text-align:center; margin-bottom:36px;">
       <div class="accent-bar" style="margin:0 auto 16px;"></div>
       <h2 style="font-size:2rem; margin-bottom:10px;">See it in action</h2>
-      <p style="color:var(--text-mid); max-width:52ch; margin:0 auto;">Short previews from real lessons. Each one is about a minute long.</p>
+      <p style="color:var(--text-mid); max-width:52ch; margin:0 auto;">Start with a 2-minute introduction. Then see real lessons, about a minute each.</p>
     </div>
-    <a class="video-feature" href="https://zoom.us/clips/share/zKEmHk2kRBmI0OeJkb6ozQ" target="_blank" rel="noopener">
+    <a class="video-feature" href="https://zoom.us/clips/share/xhQT3i52SCesQEW994bmGA" target="_blank" rel="noopener">
       <span class="vf-play"><svg width="30" height="30" viewBox="0 0 12 12" aria-hidden="true"><path d="M2.5 1.5v9l8-4.5z" fill="#ffffff"/></svg></span>
-      <span class="vf-text"><strong>Watch a lesson overview</strong><span>About 1 minute · opens in Zoom Clips</span></span>
+      <span class="vf-text"><strong>Meet Structured Steps to Writing</strong><span>About 2 minutes · opens in Zoom Clips</span></span>
     </a>
     <div class="preview-row">
+      <a href="https://zoom.us/clips/share/zKEmHk2kRBmI0OeJkb6ozQ" target="_blank" rel="noopener" class="preview-btn"><span class="play"><svg width="13" height="13" viewBox="0 0 12 12" aria-hidden="true"><path d="M2 1.5v9l8-4.5z" fill="#ffffff"/></svg></span>
+        Watch a lesson overview
+      </a>
       <a href="https://zoom.us/clips/share/xe89Ery9RYyU5Ig3qpeuPg" target="_blank" rel="noopener" class="preview-btn"><span class="play"><svg width="13" height="13" viewBox="0 0 12 12" aria-hidden="true"><path d="M2 1.5v9l8-4.5z" fill="#ffffff"/></svg></span>
         Watch a lesson walkthrough
       </a>
       <a href="https://zoom.us/clips/share/43kr7tJFR2S4NUNIknjJsQ" target="_blank" rel="noopener" class="preview-btn"><span class="play"><svg width="13" height="13" viewBox="0 0 12 12" aria-hidden="true"><path d="M2 1.5v9l8-4.5z" fill="#ffffff"/></svg></span>
         See inside the student workbook
       </a>
+    </div>
+    <div class="free-lesson">
+      <div class="fl-text">
+        <h3>Try a full lesson with your student</h3>
+        <p>Unit 1, Lesson 2: Nouns. The script, the workbook pages and the practice, free.</p>
+      </div>
+      <a href="https://payhip.com/b/yrO16" target="_blank" rel="noopener" class="btn btn-coral">Get the free lesson</a>
     </div>
   </div>
 </section>
